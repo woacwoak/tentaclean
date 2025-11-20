@@ -40,8 +40,20 @@ p {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    width: 400px;
+    width: 300px;
     border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid black;
+}
+#loginButton:visited, #signupButton:visited, #findHouseButton:visited{
+    color: black;
+}
+/* changes colour when hovering, can be removed */
+#loginButton:hover, #signupButton:hover, #findHouseButton:hover {
+    background-color: #96CDEE;
+    color: white;
+    border-color: #96CDEE;
 }
 
 #welcomePage {
