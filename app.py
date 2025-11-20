@@ -4,8 +4,13 @@ app = Flask(__name__)
 
 
 @app.route("/")
+@app.route("/home")
 def index():
     return "testing 123"
+
+@app.route("/login")
+def login():
+    return "login"
 
 
 
