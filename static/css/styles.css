@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: #f0f0f0;
     overflow: auto;
 }
@@ -13,9 +13,10 @@ h1 {
 }
 
 p {
-    font-size: 24px;
+    font-size: 48px;
     margin: 10px 0;
     font-weight: bold;
+    text-align: center;
 }
 
 #logo {
@@ -35,14 +36,35 @@ p {
     cursor: pointer;
 }
 
-#loginButton, #signupButton, #findHouseButton {
+#loginButton, #findHouseButton{
     margin: 15px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     width: 400px;
-    border-radius: 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #5ba4d8;
+    color: white;
 }
+
+#signupButton{
+    border: none;
+    text-decoration: underline;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+#loginButton:visited, #signupButton:visited, #findHouseButton:visited{
+    color: black;
+}
+
 
 #welcomePage {
     display: flex;
@@ -228,4 +250,8 @@ p {
 html{
     scroll-behavior: smooth;
     
+}
+@font-face {
+    font-family: Inter;
+    src: url(/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf) format(ttf);
 }

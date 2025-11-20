@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tentaclean</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" href="../static/img/icons/App icon.svg" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <h1>Tentaclean</h1>  
+    </main>
+    <img src="../static/img/icons/Octy (2).svg" alt="logo" id="logo">
+    
+    <div id="welcomePage">
+    <p>Roommates united, <br> mess divided.</p>
+    <p>More arms. Less mess.</p>
+
+    <a id="loginButton" href="{{ url_for('login')}}">Log in</a>
+    <!-- onclick="directToLogin() I REMOVED ONCLICK AND USED FLASK url_for FUNCTION.
+    IT WORKS WHEN YOU SET UP FLASK, BUT DOESN'T WORK WHEN YOU OPEN HTML WITH LIVE SERVER-->
+    <a id="signupButton" href="{{ url_for('signup')}}">Sign up</a>
+    <!-- onclick="directToLogin() I REMOVED ONCLICK AND USED FLASK url_for FUNCTION.
+    IT WORKS WHEN YOU SET UP FLASK, BUT DOESN'T WORK WHEN YOU OPEN HTML WITH LIVE SERVER-->
+    <a id="findHouseButton">Find a house</a>
+    </div>
+
+
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
