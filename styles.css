@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 h1 {
@@ -102,4 +102,130 @@ p {
 #createAccount {
     position: absolute;
     top: 140px;
+}
+
+.nav{
+   
+    flex-direction: column;
+    display: flex;
+    background-color: #5BA4D8;
+    padding: 25px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    
+    
+}
+
+.Tentaclean{
+    font-size: 170%;
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    
+  
+}
+
+.Home{
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+   
+}
+
+.HouseList{
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+
+}
+
+.Dashboard{
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#accounticon{
+    position: static;
+    padding-left: 150px;
+    margin-top: 20px;
+    width: 50px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.intro{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#createbtn, #joinbtn{
+    margin: 15px;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    border-radius: 20px;
+    color: white;
+    border: 0px;
+    font-size: 30px;
+  
+   
+}
+#createbtn{
+    background-color: #0A55CE;
+}
+
+#joinbtn{ 
+    background-color: #5BA4D8;
+}
+
+#houseButtons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+.houses{
+    margin: 50px;
+    margin-top: 150px;
+    text-align: center;
+    font-size: larger;
+}
+
+#housescontainer{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+#House1 {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 500px;
+   
+
+}
+
+html{
+    scroll-behavior: smooth;
+    
 }
