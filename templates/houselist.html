@@ -10,12 +10,10 @@
 
 <header>
     <nav class="nav">
-        <ul>
-            <a class="Tentaclean" href="index.html">Tentaclean</a>
-            <a class="Home" href="index.html">Home</a>
-            <a class="HouseList" href="houselist.html">House List</a>
-            <a class="Dashboard" href="dashboard.html">Dashboard</a>
-        </ul>
+        <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
+        <a class="Home" href="{{url_for('home')}}">Home</a>
+        <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
+        <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
     </nav>
 </header>
 <body>

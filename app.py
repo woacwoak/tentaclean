@@ -84,6 +84,20 @@ def logout():
 def dashboard():
     return render_template("dashboard.html")
 
+# HOUSE LIST PAGE
+@app.route("/houselist")
+def houselist():
+    return render_template("houselist.html")
+
+# CREATE HOUSE PAGE
+@app.route("/createhouse")
+def createhouse():
+    return render_template("createhouse.html")
+
+# TASK PAGE
+@app.route("/taskpage")
+def taskpage():
+    return render_template("taskpage.html")
 
 
 
