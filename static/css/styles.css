@@ -307,7 +307,6 @@ html{
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
 
-<<<<<<< HEAD
 #createaHouse{
     font-weight: lighter;
     text-align: center;
@@ -364,13 +363,6 @@ font-size: large;
 font-family: "Inter", sans-serif;
 }
 
-#descriptionInput::
-
-#descriptionInput::placeholder {
-    
-
-
-}
 
 #createHousebtn {
     margin-top: 20px;
@@ -381,7 +373,6 @@ font-family: "Inter", sans-serif;
     height: 50px;
     width: 200px;
 }
-=======
 
 #Taskpage{
     left: 650px;
@@ -468,4 +459,3 @@ font-family: "Inter", sans-serif;
     font-weight: normal;
 }
 
->>>>>>> 08e8b3423b705e91f7cce5936f8f3c8b57bf3d25
