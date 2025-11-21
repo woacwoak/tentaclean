@@ -132,7 +132,7 @@ p {
     display: flex;
     background-color: #5BA4D8;
     padding: 25px;
-    padding-top: 1px;
+    padding-top: 20px;
     padding-bottom: 20px;
     
     
@@ -148,7 +148,8 @@ p {
 }
 
 .Home{
-    padding: 120px;
+    padding-left:120px;
+    padding-right: 120px;
     color: black;
     text-decoration: none;
     font-size: larger;
@@ -156,7 +157,8 @@ p {
 }
 
 .HouseList{
-    padding: 120px;
+    padding-left:120px;
+    padding-right: 120px;
     color: black;
     text-decoration: none;
     font-size: larger;
@@ -164,7 +166,8 @@ p {
 }
 
 .Dashboard{
-    padding: 120px;
+    padding-left:120px;
+    padding-right: 120px;
     color: black;
     text-decoration: none;
     font-size: larger;
@@ -184,7 +187,7 @@ p {
 
 .intro{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 #createbtn, #joinbtn{
@@ -202,10 +205,12 @@ p {
 }
 #createbtn{
     background-color: #0A55CE;
+    margin-top: 50px;
 }
 
 #joinbtn{ 
     background-color: #5BA4D8;
+    margin-top: 50px;
 }
 
 #houseButtons {
@@ -214,14 +219,19 @@ p {
     flex-direction: row;
     justify-content: center;
     padding-top: 30px;
+    
 
+}
+
+.house{
+    font-size: 200%;
 }
 
 .houses{
     margin: 50px;
     margin-top: 150px;
     text-align: center;
-    font-size: larger;
+    font-size: 200%
 }
 
 #housescontainer{
@@ -235,9 +245,22 @@ p {
     
 }
 
+.yourhouses{
+    margin: 20px;
+    margin-top: 100px;
+    font-weight: lighter;
+}
+
+#yourhousescontainer{
+    margin: 20px;
+    margin-top: 40px;
+
+}
+
 #House1 {
     border: 2px solid black;
     margin: 10px;
+    
     padding: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -255,3 +278,4 @@ html{
     font-family: Inter;
     src: url(/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf) format(ttf);
 }
+
