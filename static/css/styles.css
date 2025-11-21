@@ -1,0 +1,285 @@
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+::selection{
+    background-color: #5BA4D8;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+    position:static;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#slogan {
+    font-size: 48px;
+    margin: 10px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#roommates {
+    margin-bottom: 20px;
+}
+
+#logo {
+    position: absolute;
+    top: 20vh;
+    left: 25vh;
+    width: 500px;
+    height: 500px;
+}
+
+#smallLogo {
+    position: absolute;
+    top: 2vh;
+    left: 100vh;
+    width: 100px;
+    height: 100px;
+}
+
+#loginButton{
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    border-radius: 15px;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #5ba4d8;
+    color: white;
+}
+
+#signupButton{
+    border: none;
+    text-decoration: underline;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    color: black;
+}
+
+#signupButtonLoginPage{
+    border: none;
+    text-decoration: underline;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+
+#loginButton:visited, #signupButton:visited, #findHouseButton:visited{
+    color: black;
+}
+
+
+#welcomePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 75vh;   
+}
+
+#signupPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;;  
+    margin-top: 0px; 
+}
+
+#signupForm {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-top: 50px;
+}
+
+#signupForm label {
+    text-align: left;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+#signupForm input {
+    margin-bottom: 25px;
+    padding: 8px;
+    font-size: 16px;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid #B8B8B8;
+}
+
+#signupForm button {
+    width: 500px;
+    margin-top: 20px;
+    color: white;
+    background-color: #5ba4d8;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #3991D0;
+}
+
+#createAccount {
+    position: absolute;
+    top: 130px;
+    font-size: 42px;
+}
+
+.nav{
+   
+    flex-direction: column;
+    display: flex;
+    background-color: #5BA4D8;
+    padding: 25px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    
+    
+}
+
+.Tentaclean{
+    font-size: 170%;
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    
+  
+}
+
+.Home{
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+   
+}
+
+.HouseList{
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+
+}
+
+.Dashboard{
+    padding: 120px;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#accounticon{
+    position: static;
+    padding-left: 150px;
+    margin-top: 20px;
+    width: 50px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.intro{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#createbtn, #joinbtn{
+    margin: 15px;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    border-radius: 20px;
+    color: white;
+    border: 0px;
+    font-size: 30px;
+  
+   
+}
+#createbtn{
+    background-color: #0A55CE;
+}
+
+#joinbtn{ 
+    background-color: #5BA4D8;
+}
+
+#houseButtons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+.houses{
+    margin: 50px;
+    margin-top: 150px;
+    text-align: center;
+    font-size: larger;
+}
+
+#housescontainer{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+#House1 {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 500px;
+   
+
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+@font-face {
+    font-family: Inter;
+    src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
+}
