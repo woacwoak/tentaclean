@@ -243,7 +243,7 @@ p {
     padding-bottom: 50px;
     text-align: center;
     width: 500px;
-   
+
 
 }
 
@@ -254,4 +254,78 @@ html{
 @font-face {
     font-family: Inter;
     src: url(/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf) format(ttf);
+}
+
+#createaHouse{
+    font-weight: lighter;
+    text-align: center;
+
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+}
+
+#formContainer{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+#createhouseform {
+     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    font-size: 22px;
+    align-self: center;
+    align-items: center;
+    width: 760px;
+}
+
+#createhouseform label {
+    align-self: flex-start;
+}
+
+#createhouseform input {
+padding-left: 8px;
+height: 60px;
+border-radius: 5px;
+border: 1px solid grey;
+width: 750px;
+font-size: large;
+}
+
+#descriptionInput {
+    height: 200px !important;
+    padding-top: 5px;
+    text-align: left;
+    vertical-align: top;
+     padding-left: 8px;
+     padding-top: 16px;
+    line-height: 16px;
+    width: 750px;
+    font-size: large;
+font-family: "Inter", sans-serif;
+}
+
+#descriptionInput::
+
+#descriptionInput::placeholder {
+    
+
+
+}
+
+#createHousebtn {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5BA4D8;
+    font-size: 22px;
+    height: 50px;
+    width: 200px;
 }
