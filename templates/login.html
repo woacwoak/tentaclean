@@ -16,17 +16,19 @@
     </main>
     <div id="signupPage">
    <p id="createAccount">Login</p>
-    <form id="signupForm">
-      <label for="username">Email:</label>
+    <form id="signupForm" action="{{url_for('login')}}" method="POST"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
+      <label for="email">Email:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
         type="text"
-        id="username"
-        name="username"
-        placeholder="What's your username?"
+        id="email"
+        name="email"
+        placeholder="What's your email?"
         required
       />
       
       <label for="password">Password:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
         type="password"
         id="password"

@@ -16,10 +16,10 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(25), unique=True, nullable=False)
     email = db.Column(db.String(150), unique=True, nullable=False)
-    password = db.Column(db.String(150), nullable=False)
+    password_hash = db.Column(db.String(150), nullable=False)
 
     def set_password(self, password):
-        self.password = generate_password_hash(password)
+        self.password_hash = generate_password_hash(password)
     
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
@@ -61,15 +61,15 @@ def signup():
 def login():
     if request.method == 'POST':
         # Get form data
-        username = request.form["username"]
+        # username = request.form["username"] # Changed to email for login
         email = request.form["email"]
         password = request.form["password"]
-        user = User.query.filter_by(username=username).first()
+        user = User.query.filter_by(email=email).first()
         # Check if user exists and password is correct
         if user and user.check_password(password):
             session["username"] = user.username
             return redirect(url_for("dashboard"))
-        return render_template("dashboard.html", error="Invalid username or password")
+        return render_template("login.html", error="Invalid username or password")
     
     return render_template("login.html")
     
