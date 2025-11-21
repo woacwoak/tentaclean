@@ -16,8 +16,9 @@
     </main>
     <div id="signupPage">
    <p id="createAccount">Create an account</p>
-    <form id="signupForm">
+    <form id="signupForm" action="{{url_for('login')}}" method="post"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
       <label for="username">Username:</label>
+      <!--Name in this input is needed for the Flask singup and login logic-->
       <input
         type="text"
         id="username"
@@ -27,6 +28,7 @@
       />
       
       <label for="email">Email:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
         type="email"
         id="email"
@@ -36,6 +38,7 @@
       />
       
       <label for="password">Password:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
         type="password"
         id="password"
@@ -45,6 +48,7 @@
       />
 
       <label for="confirmPassword">Confirm Password:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
         type="password"
         id="confirmPassword" 
