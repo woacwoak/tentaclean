@@ -15,6 +15,11 @@ def signup():
 def login():
     return render_template("login.html")
 
+@app.route("/dashboard")
+def login():
+    return render_template("dashboard.html")
+
+
 
 
 if __name__ in "__main__":
