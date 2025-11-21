@@ -16,7 +16,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(25), unique=True, nullable=False)
     email = db.Column(db.String(150), unique=True, nullable=False)
-    password_hash = db.Column(db.String(150), nullable=False)
+    password = db.Column(db.String(150), nullable=False)
 
     def set_password(self, password):
         self.password = generate_password_hash(password)
@@ -36,35 +36,42 @@ def home():
 # SIGNUP PAGE
 @app.route("/signup", methods=['GET','POST'])
 def signup():
-    # Get form data
-    username = request.form["username"]
-    email = request.form["email"]
-    password = request.form["password"]
-    user = User.query.filter_by(username=username).first()
-    # Check if user already exists
-    if user:
-        return render_template("index.html", error="Username already exists")
-    else:
+    if request.method == 'POST':
+        # Get form data
+        username = request.form["username"]
+        email = request.form["email"]
+        password = request.form["password"]
+        user = User.query.filter_by(username=username).first()
+        # Check if user already exists
+        if user:
+            return render_template("login.html", error="Username already exists")
+        
+        # Create new user in database
         new_user = User(username=username, email=email)
         new_user.set_password(password)
         db.session.add(new_user)
         db.session.commit()
-        session['username'] = username
+
+        session["username"] = username
         return redirect(url_for("dashboard"))
+    return render_template("signup.html")
 
 # LOGIN PAGE
 @app.route("/login", methods=['GET','POST'])
 def login():
-    # Get form data
-    username = request.form["username"]
-    password = request.form["password"]
-    user = User.query.filter_by(username=username).first()
-    # Check if user exists and password is correct
-    if user and user.check_password(password):
-        session["username"] = user.username
-        return redirect(url_for("dashboard"))
-    else:
-        return render_template("index.html", error="Invalid username or password")
+    if request.method == 'POST':
+        # Get form data
+        username = request.form["username"]
+        email = request.form["email"]
+        password = request.form["password"]
+        user = User.query.filter_by(username=username).first()
+        # Check if user exists and password is correct
+        if user and user.check_password(password):
+            session["username"] = user.username
+            return redirect(url_for("dashboard"))
+        return render_template("dashboard.html", error="Invalid username or password")
+    
+    return render_template("login.html")
     
 
 
