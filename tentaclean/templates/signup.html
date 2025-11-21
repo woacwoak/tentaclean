@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tentaclean</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+       
+        <img src="../static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo" id="smallLogo">
+
+    </main>
+    <div id="signupPage">
+   <p id="createAccount">Create an account</p>
+    <form id="signupForm" action="{{url_for('login')}}" method="post"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
+      <label for="username">Username:</label>
+      <!--Name in this input is needed for the Flask singup and login logic-->
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="What's your username?"
+        required
+      />
+      
+      <label for="email">Email:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="e.g. octy.theoctopus@gmail.com"
+        required
+      />
+      
+      <label for="password">Password:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
+      <input
+        type="password"
+        id="confirmPassword" 
+        name="confirmPassword"
+        placeholder="Repeat your password"
+        required
+      />
+      <button type="submit" id="submit">Sign Up</button>
+    </form>
+    </div>
+
+
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
