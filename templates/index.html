@@ -6,25 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tentaclean</title>
     <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="icon" href="../static/img/icons/App icon.svg" type="image/x-icon">
+    <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
   </head>
   <body>
     <main>
         <h1>Tentaclean</h1>  
     </main>
-    <img src="../static/img/icons/Octy (2).svg" alt="logo" id="logo">
+    <img src="../static/img/icons/Octy.svg" alt="logo" id="logo">
     
     <div id="welcomePage">
-    <p>Roommates united, <br> mess divided.</p>
-    <p>More arms. Less mess.</p>
+
+      <div id="slogan">
+    <p id="roommates">Roommates united, <br> mess divided.</p>
+    <p id="moreArms">More arms. Less mess.</p>
+    </div>
 
     <a id="loginButton" href="{{ url_for('login')}}">Log in</a>
     <!-- onclick="directToLogin() I REMOVED ONCLICK AND USED FLASK url_for FUNCTION.
     IT WORKS WHEN YOU SET UP FLASK, BUT DOESN'T WORK WHEN YOU OPEN HTML WITH LIVE SERVER-->
-    <a id="signupButton" href="{{ url_for('signup')}}">Sign up</a>
+    <a id="signupButton" href="{{ url_for('signup')}}">Create an account</a>
     <!-- onclick="directToLogin() I REMOVED ONCLICK AND USED FLASK url_for FUNCTION.
     IT WORKS WHEN YOU SET UP FLASK, BUT DOESN'T WORK WHEN YOU OPEN HTML WITH LIVE SERVER-->
-    <a id="findHouseButton">Find a house</a>
     </div>
 
 

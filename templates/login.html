@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tentaclean</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+       
+        <img src="../static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo" id="smallLogo">
+
+    </main>
+    <div id="signupPage">
+   <p id="createAccount">Login</p>
+    <form id="signupForm">
+      <label for="username">Email:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="What's your username?"
+        required
+      />
+      
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+
+      <button type="submit" id="submit">Login</button>
+    </form>
+    <a id="signupButtonLoginPage" href="{{ url_for('signup')}}">Create an account</a>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
