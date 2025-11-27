@@ -26,7 +26,7 @@ class User(db.Model):
     
 class House(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    ownerid =  db.Column(db.Integer, primary_key=True)
+    ownerid = db.Column(db.Integer, primary_key=False)
     housename = db.Column(db.String(255), unique=True, nullable=False)
     address = db.Column(db.String(255), unique=False, nullable=True)
     capacity = db.Column(db.Integer, unique=False)
@@ -79,6 +79,7 @@ def login():
         # Check if user exists and password is correct
         if user and user.check_password(password):
             session["username"] = user.username
+            session["email"] = user.email
             flash("Login successful!", "success")
             return redirect(url_for("dashboard"))
         else:
@@ -104,8 +105,37 @@ def houselist():
     return render_template("houselist.html")
 
 # CREATE HOUSE PAGE
-@app.route("/createhouse")
+@app.route("/createhouse", methods=["GET","POST"])
 def createhouse():
+    user = User.query.filter_by(email=session.get("email")).first()
+    if not user:
+        flash("Please log in first", "error")
+        return redirect(url_for("login"))
+    
+    if request.method == "POST":
+        housename = request.form.get("housename")
+        address = request.form.get("address")
+        capacity = request.form.get("capacity")
+        description = request.form.get("description")
+        password = request.form.get("password")
+
+        if not all([housename, address, capacity, description, password]):
+            flash("Fill all the information, please", "error")
+            return redirect(url_for("createhouse"))
+        
+        new_house = House(
+            housename=housename,
+            address=address,
+            capacity=int(capacity),
+            description=description,
+            password=password,
+            ownerid=user.id
+        )
+        db.session.add(new_house)
+        db.session.commit()
+        flash("House created successfully!", "success")
+        return redirect(url_for("houselist"))
+    
     return render_template("createhouse.html")
 
 # TASK PAGE
