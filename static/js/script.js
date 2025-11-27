@@ -4,8 +4,6 @@ function directToLogin() {
 
 function directToSignup() {
     window.location.href = "signup.html";
-<<<<<<< HEAD
-=======
 }
 
 // Task page functionality
@@ -165,5 +163,4 @@ if (signupForm && signupForm.action.includes('signup')) {
             return false;
         }
     });
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }

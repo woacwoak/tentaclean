@@ -154,24 +154,6 @@ def taskpage(house_id):
     house = House.query.get_or_404(house_id)
     return render_template("taskpage.html", house=house)
 
-
-
-
-
-if __name__ in "__main__":
-    return render_template("houselist.html")
-
-# CREATE HOUSE PAGE
-@app.route("/createhouse")
-def createhouse():
-    return render_template("createhouse.html")
-
-# TASK PAGE
-@app.route("/taskpage")
-def taskpage():
-    return render_template("taskpage.html")
-
-
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
