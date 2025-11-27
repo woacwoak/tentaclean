@@ -1,0 +1,842 @@
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f0f0f0;
+    overflow: static;
+}
+
+/* Page load animation class */
+.page-load {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Page load animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+::selection{
+    background-color: #5BA4D8;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+    position:static;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 20px;
+    animation: slideInFromTop 0.6s ease-out;
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#slogan {
+    font-size: 48px;
+    margin: 10px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#roommates {
+    margin-bottom: 20px;
+}
+
+#logo {
+    position: absolute;
+    top: 20vh;
+    left: 25vh;
+    width: 500px;
+    height: 500px;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#smallLogo {
+    position: absolute;
+    top: 2vh;
+    left: 100vh;
+    width: 100px;
+    height: 100px;
+}
+
+#loginButton{
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    border-radius: 15px;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #5ba4d8;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#loginButton:hover {
+    background-color: #3991D0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#loginButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#signupButton{
+    border: none;
+    text-decoration: underline;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    color: black;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+#signupButton:hover {
+    color: #5ba4d8;
+    transform: scale(1.05);
+}
+
+#signupButtonLoginPage{
+    border: none;
+    text-decoration: underline;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+#signupButtonLoginPage:hover {
+    color: #5ba4d8;
+    transform: scale(1.05);
+}
+
+#loginButton:visited, #signupButton:visited, #findHouseButton:visited{
+    color: black;
+}
+
+
+#welcomePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 75vh;   
+    animation: slideInFromRight 0.8s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#signupPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;;  
+    margin-top: 0px;
+    animation: zoomIn 0.5s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#signupForm {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-top: 50px;
+}
+
+#signupForm label {
+    text-align: left;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+#signupForm input {
+    margin-bottom: 25px;
+    padding: 8px;
+    font-size: 16px;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
+}
+
+#signupForm input:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+#signupForm button {
+    width: 500px;
+    margin-top: 20px;
+    color: white;
+    background-color: #5ba4d8;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#signupForm button:hover {
+    background-color: #3991D0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#signupForm button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+#submit:hover {
+    background-color: #3991D0;
+}
+
+#createAccount {
+    position: absolute;
+    top: 130px;
+    font-size: 42px;
+}
+
+
+.Tentaclean{
+    font-size: 170%;    
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav {
+    height:100px;
+    background-color: #5BA4D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+nav a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: larger;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+
+#accounticon{
+    position: static;
+    width: 50px;
+    filter: invert(100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#accounticon:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.intro{
+    text-align: center;
+    margin-top: 70px;
+}
+
+#createbtn, #joinbtn{
+    margin: 15px;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    border-radius: 20px;
+    color: white;
+    border: 0px;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#createbtn:hover, #joinbtn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#createbtn:active, #joinbtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+#createbtn{
+    background-color: #0A55CE;
+    margin-top: 50px;
+}
+
+#joinbtn{ 
+    background-color: #5BA4D8;
+    margin-top: 50px;
+}
+
+#houseButtons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+    
+
+}
+
+.house{
+    font-size: 200%;
+}
+
+.houses{
+    margin: 50px;
+    margin-top: 150px;
+    text-align: center;
+    font-size: 200%
+}
+
+#housescontainer{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.yourhouses{
+    margin: 20px;
+    margin-top: 100px;
+    font-weight: lighter;
+}
+
+#yourhousescontainer{
+    margin: 20px;
+    margin-top: 40px;
+
+}
+
+#House1 {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 500px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+#House1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: #5BA4D8;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+@font-face {
+    font-family: Inter;
+    src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
+}
+
+#createaHouse{
+    font-weight: lighter;
+    text-align: center;
+
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+}
+
+#formContainer{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+#createhouseform {
+     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    font-size: 22px;
+    align-self: center;
+    align-items: center;
+    width: 760px;
+}
+
+#createhouseform label {
+    align-self: flex-start;
+}
+
+#createhouseform input {
+padding-left: 8px;
+height: 60px;
+border-radius: 5px;
+border: 1px solid grey;
+width: 750px;
+font-size: large;
+transition: all 0.3s ease;
+}
+
+#createhouseform input:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+#descriptionInput {
+    height: 200px !important;
+    padding-top: 5px;
+    text-align: left;
+    vertical-align: top;
+     padding-left: 8px;
+     padding-top: 16px;
+    line-height: 16px;
+    width: 750px;
+    font-size: large;
+font-family: "Inter", sans-serif;
+transition: all 0.3s ease;
+}
+
+#descriptionInput:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+
+#createHousebtn {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5BA4D8;
+    font-size: 22px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#createHousebtn:hover {
+    background-color: #3991D0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#createHousebtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#Taskpage{
+    left: 650px;
+    position: absolute;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    font: "Inter";
+    font-weight: normal;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.task-btn {
+    width: 423px;
+    height: 65px;
+    padding: 10px 16px;
+    border: 2px solid #cfcfcf;
+    background-color: white;
+    border-radius: 18px;
+    font-size: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.task-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(91, 164, 216, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.task-btn:hover::before {
+    left: 100%;
+}
+
+.task-btn:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #5BA4D8;
+}
+
+.task-btn.completed {
+    animation: completeTask 0.5s ease-out;
+}
+
+.circle {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.circle:hover {
+    transform: scale(1.2);
+    border-color: #5BA4D8;
+}
+
+.create-btn {
+    background-color: #b8b8b8;
+    border: none;
+    color: #4b4b4b;
+    transition: all 0.3s ease;
+}
+
+.create-btn:hover {
+    background-color: #a9a9a9;
+    transform: scale(1.02);
+}
+
+.task-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    filter: brightness(0.8);
+}
+
+.plus {
+    font-size: 20px;
+    margin-right: 4px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #5ba4d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 25px;
+    font: "Inter";
+    font-weight: normal;
+}
+
+/* LOGIN ans SIGNUP ERROR HANDLING*/
+/* Base alert style */
+.alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 10px 10px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+
+    animation: slideInAlert 0.5s ease-out, fadeout 3s forwards;
+    animation-delay: 0s, 2s;
+}
+
+@keyframes slideInAlert {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    to{opacity: 0;}
+}
+
+/* Green for success messages */
+.alert-success {
+    background-color: #2ecc71;
+}
+
+/* Red for error messages */
+.alert-error {
+    background-color: #e74c3c;
+}
+/* END OF LOGIN ans SIGNUP ERROR HANDLING*/
+
+/* Task animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.task-btn.completed {
+    transition: all 0.3s ease;
+}
+
+/* Stagger animation for houses */
+#housescontainer > div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#housescontainer > div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#housescontainer > div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#housescontainer > div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Pulse animation for create buttons */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.create-btn:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Task animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@keyframes completeTask {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Stagger animation for multiple houses */
+#housescontainer > div:nth-child(1) { animation-delay: 0.1s; }
+#housescontainer > div:nth-child(2) { animation-delay: 0.2s; }
+#housescontainer > div:nth-child(3) { animation-delay: 0.3s; }
+#housescontainer > div:nth-child(4) { animation-delay: 0.4s; }
+
+/* Pulse animation for important elements */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus state improvements */
+input:focus, textarea:focus {
+    animation: focusGlow 0.3s ease-out;
+}
+
+@keyframes focusGlow {
+    from {
+        box-shadow: 0 0 0 0 rgba(91, 164, 216, 0.4);
+    }
+    to {
+        box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    }
+}

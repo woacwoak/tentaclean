@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tentaclean</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" href="/static/img/icons/App_icon_circle.svg" type="image/x-icon">
+  </head>
+  <body class="page-load">
+    <!-- Handle error (flashed) messages from Flask -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      
+      {% if messages %}
+        <!-- Loop through all flashed messages -->
+        {% for category, message in messages %}
+          
+          <!-- Bootstrap-style alert box -->
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+
+        {% endfor %}
+      {% endif %}
+
+    {% endwith %}
+    <main>
+       
+        <img src="/static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo" id="smallLogo">
+
+    </main>
+    <div id="signupPage">
+   <p id="createAccount">Login</p>
+    <form id="signupForm" action="{{url_for('login')}}" method="POST"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
+      <label for="email">Email:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="What's your email?"
+        required
+      />
+      
+      <label for="password">Password:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+
+      <button type="submit" id="submit">Login</button>
+    </form>
+    <a id="signupButtonLoginPage" href="/signup">Create an account</a>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
