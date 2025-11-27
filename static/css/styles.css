@@ -315,19 +315,23 @@ html{
     align-self: center;
     align-items: center;
     width: 760px;
+    padding: 10px;
+    padding-left: 20px;
 }
 
 #createhouseform label {
     align-self: flex-start;
+    width: 500px;
+    margin-bottom: 5px;
 }
 
 #createhouseform input {
-padding-left: 8px;
-height: 60px;
-border-radius: 5px;
-border: 1px solid grey;
-width: 750px;
-font-size: large;
+    padding-left: 8px;
+    height: 60px;
+    border-radius: 15px;
+    border: 2px solid #B8B8B8;
+    width: 750px;
+    font-size: 20px;
 }
 
 #descriptionInput {
@@ -341,17 +345,24 @@ font-size: large;
     width: 750px;
     font-size: large;
 font-family: "Inter", sans-serif;
+border: 2px solid #B8B8B8;
 }
 
 
 #createHousebtn {
+    width: 500px;
     margin-top: 20px;
-    border-radius: 10px;
+    color: white;
+    background-color: #5ba4d8;
     border: none;
-    background-color: #5BA4D8;
-    font-size: 22px;
-    height: 50px;
-    width: 200px;
+    cursor: pointer;
+    font-size: 40px;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 100px;
 }
 
 #Taskpage{
@@ -439,6 +450,23 @@ font-family: "Inter", sans-serif;
     font-weight: normal;
 }
 
+@media screen and (width<=320px){
+    .nav{
+        display: none;
+    }
+    .intro {
+        font-size: 20px;
+    }
+    #createbtn{
+       
+        font-size: 20px;
+    }
+    #joinbtn{
+       
+        font-size: 20px;
+    }
+
+}
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
 .alert {
