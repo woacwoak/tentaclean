@@ -279,7 +279,47 @@ html{
     scroll-behavior: smooth;
     
 }
+
+#logOut { 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #5ba4d8;
+    color: white;
+}
+
+#logOut:hover {
+    background-color: #3991D0;
+}
+
 @font-face {
     font-family: Inter;
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
+
+@media screen and (width<=320px){
+    
+}
+
+@media screen and (width<=320px){
+    #createAccount {
+        font-size: 32px;
+        top: 100px;
+    }
+
+   .Dashboard {
+    background: no-repeat center/20% url(/Images/dashboard_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg);
+    font-size: 0px;
+}
+   
+}
+
+
