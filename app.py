@@ -102,7 +102,8 @@ def dashboard():
 # HOUSE LIST PAGE
 @app.route("/houselist")
 def houselist():
-    return render_template("houselist.html")
+    houses = House.query.all()
+    return render_template("houselist.html", houses=houses)
 
 # CREATE HOUSE PAGE
 @app.route("/createhouse", methods=["GET","POST"])
