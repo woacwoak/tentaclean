@@ -41,13 +41,23 @@
   <a id="joinbtn" >Join House</a>
   </div>
 
-  <h2 class="houses">Houses</h2>
+  <h2 class="houses">All Available Houses</h2>
 
   <div id="housescontainer">
-    <div id="House1">
-        <h2 class="house">House 1</h2>
-        <a id="joinbtn" >Join House</a>
-  </div>
+  {% if houses %}
+    {% for house in houses %}
+      <div id="House1">
+          <h2 class="house">{{house.name}}</h2>
+          <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Tasks</button>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No available games</p>
+  {% endif %}
+
+      
+
+
 
  
 
