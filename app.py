@@ -23,6 +23,15 @@ class User(db.Model):
     
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+    
+class House(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    ownerid =  db.Column(db.Integer, primary_key=True)
+    housename = db.Column(db.String(255), unique=True, nullable=False)
+    address = db.Column(db.String(255), unique=False, nullable=True)
+    capacity = db.Column(db.Integer, unique=False)
+    description = db.Column(db.String(255), unique=False, nullable=False)
+    password = db.Column(db.String(255), unique=False, nullable=True)
 
 
 # HOME PAGE
