@@ -462,3 +462,19 @@ font-family: "Inter", sans-serif;
     font-weight: normal;
 }
 
+@media screen and (width<=320px){
+    .nav{
+        display: none;
+    }
+    .intro {
+        font-size: 20px;
+    }
+    #createbtn{
+        padding: 10px;
+        font-size: 20px;
+    }
+    #joinbtn{
+        padding: 18px;
+        font-size: 20px;
+    }
+}
