@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+<<<<<<< HEAD
         <link rel="stylesheet" href="../static/css/styles.css">
      <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
 </head>
@@ -17,6 +18,23 @@
     </nav>
 </header>
 <body>
+=======
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" href="/static/img/icons/App_icon_circle.svg" type="image/x-icon">
+</head>
+<body class="page-load">
+<header>
+    <nav class="nav">
+        <div style="display: flex; gap: 30px; align-items: center; width: 100%;">
+            <a class="Tentaclean" href="/" style="margin-right: auto;">Tentaclean</a>
+            <a class="HouseList" href="/houselist">House List</a>
+            <a class="CreateHouse" href="/createhouse">Create a House</a>
+            <a class="Dashboard" href="/dashboard">Dashboard</a>
+            <img src="/static/img/icons/account_circle.svg" alt="account" id="accounticon">
+        </div>
+    </nav>
+</header>
+>>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
     <!-- Handle error (flashed) messages from Flask -->
     {% with messages = get_flashed_messages(with_categories=True) %}
       
