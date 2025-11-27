@@ -9,6 +9,22 @@
     <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
   </head>
   <body>
+    <!-- Handle error (flashed) messages from Flask -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      
+      {% if messages %}
+        <!-- Loop through all flashed messages -->
+        {% for category, message in messages %}
+          
+          <!-- Bootstrap-style alert box -->
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+
+        {% endfor %}
+      {% endif %}
+
+    {% endwith %}
     <main>
        
         <img src="../static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo" id="smallLogo">
@@ -41,7 +57,9 @@
     </form>
     <a id="signupButtonLoginPage" href="{{ url_for('signup')}}">Create an account</a>
     </div>
-
+ <div class="footer">
+    <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
+ </div>
     <script src="../static/js/script.js"></script>
   </body>
 </html>

@@ -8,20 +8,18 @@
     <title>Create a house</title>
     
     <link rel="stylesheet" href="../static/css/styles.css">  <!--CSS Linking-->
-    <link rel="icon" href="./icons/app icon/App icon.svg" type="image/x-icon">
+       <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
     
 </head>
 
 <header>
 
     <nav class="nav">
-        <ul>
-            <a class="Tentaclean" href="index.html">Tentaclean</a>
-            <a class="Home" href="index.html">Home</a>
-            <a class="HouseList" href="houselist.html">House List</a>
-            <a class="Dashboard" href="dashboard.html">Dashboard</a>
-            <img src="images/account.circle.svg" alt="account" id="accounticon"> 
-        </ul>
+        <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
+        <a class="Home" href="{{url_for('home')}}">Home</a>
+        <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
+        <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
+        <img src="../static/img/icons/account.circle.svg" alt="account" id="accounticon">
     </nav>
 
 </header>
@@ -75,7 +73,9 @@
       </div>
 
   
-
+ <div class="footer">
+    <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
+ </div>
 </body>
 
 </html>
