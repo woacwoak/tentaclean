@@ -208,17 +208,20 @@ nav a{
     color: white;
     border: 0px;
     font-size: 30px;
+    text-align: center;
   
    
 }
 #createbtn{
     background-color: #0A55CE;
     margin-top: 50px;
+    text-decoration: none;
 }
 
 #joinbtn{ 
     background-color: #5BA4D8;
     margin-top: 50px;
+    
 }
 
 #houseButtons {
@@ -268,12 +271,16 @@ nav a{
 #House1 {
     border: 2px solid black;
     margin: 10px;
-    
+   
     padding: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     width: 500px;
+    display: flex; /* Turn it into a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center;
 
 
 }
@@ -465,6 +472,7 @@ border: 2px solid #B8B8B8;
        
         font-size: 20px;
     }
+    
 
 }
 /* LOGIN ans SIGNUP ERROR HANDLING*/
