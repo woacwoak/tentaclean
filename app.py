@@ -23,7 +23,6 @@ class User(db.Model):
     
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
-<<<<<<< HEAD
     
 class House(db.Model):
     id = db.Column(db.Integer, primary_key=True)    
@@ -41,8 +40,6 @@ class Task(db.Model):
     checked = db.Column(db.Integer, unique=False, nullable=True)
 
 
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 
 
 # HOME PAGE
@@ -74,10 +71,7 @@ def signup():
         db.session.commit()
 
         session["username"] = username
-<<<<<<< HEAD
         session["email"] = email
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
         flash("Your account has been successfully created!", "success")
         return redirect(url_for("dashboard"))
     return render_template("signup.html")
@@ -94,10 +88,7 @@ def login():
         # Check if user exists and password is correct
         if user and user.check_password(password):
             session["username"] = user.username
-<<<<<<< HEAD
             session["email"] = user.email
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
             flash("Login successful!", "success")
             return redirect(url_for("dashboard"))
         else:
@@ -120,7 +111,6 @@ def dashboard():
 # HOUSE LIST PAGE
 @app.route("/houselist")
 def houselist():
-<<<<<<< HEAD
     houses = House.query.all()
     return render_template("houselist.html", houses=houses)
 
@@ -169,7 +159,6 @@ def taskpage(house_id):
 
 
 if __name__ in "__main__":
-=======
     return render_template("houselist.html")
 
 # CREATE HOUSE PAGE
@@ -184,7 +173,6 @@ def taskpage():
 
 
 if __name__ == "__main__":
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
     with app.app_context():
         db.create_all()
     app.run(debug=True)
