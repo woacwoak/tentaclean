@@ -448,6 +448,13 @@ font-family: "Inter", sans-serif;
     font-size: 15px;
     color: #fff;
     font-weight: 500;
+
+    animation: fadeout 3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeout {
+    to{opacity: 0;}
 }
 
 /* Green for success messages */

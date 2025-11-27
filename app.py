@@ -44,6 +44,7 @@ def signup():
         user = User.query.filter_by(username=username).first()
         # Check if user already exists
         if user:
+            flash("Username already exists")
             return render_template("login.html", error="Username already exists")
         
         # Create new user in database
@@ -53,6 +54,7 @@ def signup():
         db.session.commit()
 
         session["username"] = username
+        flash("Your account has been successfully created!", "success")
         return redirect(url_for("dashboard"))
     return render_template("signup.html")
 
