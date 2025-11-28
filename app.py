@@ -25,13 +25,21 @@ class User(db.Model):
         return check_password_hash(self.password_hash, password)
     
 class House(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    ownerid = db.Column(db.Integer, primary_key=False)
-    housename = db.Column(db.String(255), unique=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True)    
+    ownerid = db.Column(db.Integer, db.ForeignKey("user.id"))
+    name = db.Column(db.String(255), unique=True, nullable=False)
     address = db.Column(db.String(255), unique=False, nullable=True)
     capacity = db.Column(db.Integer, unique=False)
     description = db.Column(db.String(255), unique=False, nullable=False)
     password = db.Column(db.String(255), unique=False, nullable=True)
+
+class Task(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    houseid = db.Column(db.Integer, db.ForeignKey("house.id"))
+    name = db.Column(db.String(255), unique=True, nullable=False)
+    checked = db.Column(db.Integer, unique=False, nullable=True)
+
+
 
 
 # HOME PAGE
@@ -63,6 +71,7 @@ def signup():
         db.session.commit()
 
         session["username"] = username
+        session["email"] = email
         flash("Your account has been successfully created!", "success")
         return redirect(url_for("dashboard"))
     return render_template("signup.html")
@@ -102,7 +111,8 @@ def dashboard():
 # HOUSE LIST PAGE
 @app.route("/houselist")
 def houselist():
-    return render_template("houselist.html")
+    houses = House.query.all()
+    return render_template("houselist.html", houses=houses)
 
 # CREATE HOUSE PAGE
 @app.route("/createhouse", methods=["GET","POST"])
@@ -113,18 +123,18 @@ def createhouse():
         return redirect(url_for("login"))
     
     if request.method == "POST":
-        housename = request.form.get("housename")
+        name = request.form.get("name")
         address = request.form.get("address")
         capacity = request.form.get("capacity")
         description = request.form.get("description")
         password = request.form.get("password")
 
-        if not all([housename, address, capacity, description, password]):
+        if not all([name, address, capacity, description, password]):
             flash("Fill all the information, please", "error")
             return redirect(url_for("createhouse"))
         
         new_house = House(
-            housename=housename,
+            name=name,
             address=address,
             capacity=int(capacity),
             description=description,
@@ -139,15 +149,12 @@ def createhouse():
     return render_template("createhouse.html")
 
 # TASK PAGE
-@app.route("/taskpage")
-def taskpage():
-    return render_template("taskpage.html")
+@app.route("/taskpage/<int:house_id>")
+def taskpage(house_id):
+    house = House.query.get_or_404(house_id)
+    return render_template("taskpage.html", house=house)
 
-
-
-
-
-if __name__ in "__main__":
+if __name__ == "__main__":
     with app.app_context():
         db.create_all()
     app.run(debug=True)
