@@ -14,13 +14,13 @@
 
 <header>
 
-    <nav class="nav">
-        <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
-        <a class="Home" href="{{url_for('home')}}">Home</a>
-        <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
-        <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
-        <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
-    </nav>
+  <nav class="nav">
+    <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
+    <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
+    <a class="Home" href="{{url_for('createhouse')}}">Create House</a>
+    <a id="logOut" href="{{url_for('logout')}}">Log out</a>
+    <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
+  </nav>
 
 </header>
 
@@ -77,15 +77,16 @@
         name="description"
         placeholder="e.g. My student Home"
         required></textarea>
+
         <button type="submit" id="createHousebtn">Create House</button>
     </form>
 
       </div>
 
   
- <div class="footer">
+ <!-- <div class="footer">
     <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
- </div>
+ </div> -->
 </body>
 
 </html>
