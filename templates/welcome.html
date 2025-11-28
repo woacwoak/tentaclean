@@ -21,6 +21,24 @@
 </header>
 
 <body>
+
+    <!-- Handle error (flashed) messages from Flask -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      
+      {% if messages %}
+        <!-- Loop through all flashed messages -->
+        {% for category, message in messages %} 
+          
+          <!-- Bootstrap-style alert box -->
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+
+        {% endfor %}
+      {% endif %}
+
+    {% endwith %}
+
     <h1 class="intro">Welcome, {{user.username}}</h1>
 
     <div id="houseButtons">

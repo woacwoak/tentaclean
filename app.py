@@ -108,7 +108,7 @@ def login():
         
         flash("Invalid username or password.", "error")
         return render_template("login.html")
-        
+    
     return render_template("login.html")
     
 @app.route("/logout")
@@ -151,6 +151,8 @@ def createhouse():
         description = request.form.get("description")
         password = request.form.get("password")
 
+        user = User.query.get(session["user_id"])
+
         if not all([name, address, capacity, description, password]):
             flash("Fill all the information, please", "error")
             return redirect(url_for("createhouse"))
@@ -161,7 +163,7 @@ def createhouse():
             capacity=int(capacity),
             description=description,
             password=password,
-            ownerid=User.id
+            ownerid=user.id
         )
         db.session.add(new_house)
         db.session.commit()
