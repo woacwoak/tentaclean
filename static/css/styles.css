@@ -766,6 +766,7 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
     .nav{
         display: flex;
@@ -857,8 +858,10 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
-    .nav{
+
+    .nav {
         display: flex;
         gap: 50px;
         padding-left: 0px;
@@ -996,10 +999,13 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
-        .nav{
+
+        .nav {
         display: none;
     }
+    
     .navmobile{
         display: flex;
         gap: 80px;
@@ -1139,6 +1145,7 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
     .nav{
         display: none;
@@ -1253,7 +1260,7 @@ html{
 
     #createAccount {
         font-size: 28px;
-        top: 90px;
+        top: 100px;
     }
 
     #loginText {
@@ -1264,7 +1271,7 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
-        
+        margin-top: 0;
     }
 
  
@@ -1587,10 +1594,7 @@ transition: all 0.3s ease;
         height: 20px;
     }
 
-    #signupPage {
-
-        height: 50vh;
-    }
+    
     .yourhouses{
         
         text-align: center;
