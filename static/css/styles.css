@@ -1,7 +1,7 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: #f0f0f0;
-    overflow: static;
+    overflow-x: hidden;
 }
 
 /* Page load animation class */
@@ -75,11 +75,18 @@ h1 {
 }
 
 #smallLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 2vh;
-    left: 100vh;
-    width: 100px;
+    width:100%;
     height: 100px;
+}
+
+#smallLogo img {
+    width: 100px;
+    height: auto;
+    
 }
 
 #loginButton{
@@ -178,7 +185,6 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 100vh;;  
-    margin-top: 0px; 
     margin-top: 0px;
     animation: zoomIn 0.5s ease-out;
 }
@@ -312,6 +318,16 @@ nav a:hover {
     opacity: 0.8;
 }
 
+nav button{
+    background-color: #5BA4D8;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+}
+
 
 #accounticon{
     position: static;
@@ -426,12 +442,15 @@ nav a:hover {
     padding-bottom: 50px;
     text-align: center;
     width: 500px;
+<<<<<<< HEAD
     display: flex; /* Turn it into a flex container */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
     justify-content: center;
 
 
+=======
+>>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
     animation-fill-mode: both;
@@ -458,10 +477,206 @@ html{
     scroll-behavior: smooth;
     
 }
+
+#logOut { 
+    position: relative;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #5ba4d8;
+    color: white;
+}
+
+#logOut:hover {
+    background-color: #3991D0;
+}
+
+.signupBody {
+    overflow-y: hidden;
+}
+
 @font-face {
     font-family: Inter;
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
+
+@media screen and (width<=1441px){
+    #signupForm input {
+        width: 550px;
+        margin-bottom: 30px;
+        font-size: 26px;
+    }
+
+    #signupForm label {
+        width: 550px;
+        font-size: 26px;
+    }
+
+    #signupForm button {
+        width: 570px;
+        font-size: 26px;
+    }    
+
+    #signupForm {
+        margin-top: 100px;
+    }
+
+    #createAccount {
+        font-size: 40px;
+        top: 125px;
+    }
+
+    #smallLogo img {
+        width: 100px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (width<=1025px){
+    #signupForm input {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 350px;
+    }
+
+    #signupForm button {
+        width: 370px;
+        
+    }    
+
+    #signupForm {
+        margin-top: 100px;
+    }
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width<=769px){
+    #signupForm input {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 350px;
+
+    }
+
+    #signupForm button {
+        width: 370px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width<=426px){
+    #signupForm input {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 350px;
+
+    }
+
+    #signupForm button {
+        width: 370px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width<=376px){
+    #signupForm input {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 300px;
+
+    }
+
+    #signupForm button {
+        width: 320px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+   
+@media screen and (width<=321px){
+    #signupForm input {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 250px;
+
+    }
+
+    #signupForm button {
+        width: 270px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+
+
 
 #createaHouse{
     font-weight: lighter;
@@ -491,12 +706,16 @@ html{
     align-self: center;
     align-items: center;
     width: 760px;
+<<<<<<< HEAD
     padding: 10px;
     padding-left: 20px;
+=======
+>>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
 }
 
 #createhouseform label {
     align-self: flex-start;
+<<<<<<< HEAD
     width: 500px;
     margin-bottom: 5px;
 }
@@ -508,6 +727,25 @@ html{
     border: 2px solid #B8B8B8;
     width: 750px;
     font-size: 20px;
+=======
+}
+
+#createhouseform input {
+padding-left: 8px;
+height: 60px;
+border-radius: 5px;
+border: 1px solid grey;
+width: 750px;
+font-size: large;
+transition: all 0.3s ease;
+}
+
+#createhouseform input:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+>>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
 }
 
 #descriptionInput {
@@ -520,9 +758,14 @@ html{
     line-height: 16px;
     width: 750px;
     font-size: large;
+<<<<<<< HEAD
     font-family: "Inter", sans-serif;
     border: 2px solid #B8B8B8;
     transition: all 0.3s ease;
+=======
+font-family: "Inter", sans-serif;
+transition: all 0.3s ease;
+>>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
 }
 
 #descriptionInput:focus {
@@ -682,6 +925,7 @@ html{
     font-weight: normal;
 }
 
+<<<<<<< HEAD
 @media screen and (width<=320px){
     .nav{
         display: none;
@@ -696,6 +940,8 @@ html{
         font-size: 20px;
     }
 }
+=======
+>>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
 .alert {
