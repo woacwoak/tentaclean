@@ -10,13 +10,12 @@
 <body class="page-load">
 <header>
     <nav class="nav">
-        <div style="display: flex; gap: 30px; align-items: center; width: 100%;">
-            <a class="Tentaclean" href="{{url_for('home')}}" style="margin-right: auto;">Tentaclean</a>
-            <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
-            <a class="CreateHouse" href="/createhouse">Create a House</a>
-            <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
-            <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
-        </div>
+        <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
+        <a class="Home" href="{{url_for('home')}}">Home</a>
+        <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
+        <a class="Dashboard" href="#">Dashboard</a>
+        <button id="logOut">Log out</button>
+        <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
     </nav>
 </header>
     <!-- Handle error (flashed) messages from Flask -->
@@ -38,12 +37,9 @@
 
 
 <h1 class="intro">Welcome, {{username}}[User Name]</h1>
-<div id="houseButtons">
-  <a href="{{url_for('createhouse')}}" id="createbtn" >Create House</a>
-  <a id="joinbtn" >Join House</a>
-  </div>
 
-  <h2 class="houses">All Available Houses</h2>
+
+  <h2 class="houses">Your Houses</h2>
 
   <div id="housescontainer">
   {% if houses %}
@@ -57,8 +53,6 @@
     <p>No available games</p>
   {% endif %}
   </div>
- <div class="footer">
-    <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
- </div>
+
 </body>
 </html>
