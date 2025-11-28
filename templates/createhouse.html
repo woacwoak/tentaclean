@@ -30,12 +30,12 @@
     
     <div id="formContainer">
 
-    <form id="createhouseform">
+    <form id="createhouseform" action="{{url_for('createhouse')}}" method="POST">
       <label for="House name">House name:</label>
       <input
         type="text"
-        id="houseName"
-        name="House name"
+        id="name"
+        name="name"
         placeholder="e.g. My Home"
         required
       />
@@ -45,7 +45,7 @@
       <input
         type="text"
         id="address"
-        name="Address"
+        name="address"
         placeholder="e.g. Elm Street 4"
         required
       />
@@ -55,8 +55,17 @@
       <input
         type="text"
         id="capacity"
-        name="Capacity"
+        name="capacity"
         placeholder="e.g. 10"
+        required
+    />
+
+      <label for="Password">House Password:</label>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        placeholder="Enter your house password"
         required
     />
 
@@ -65,14 +74,18 @@
       <textarea
         type="text"
         id="descriptionInput"
-        name="Description"
+        name="description"
         placeholder="e.g. My student Home"
         required></textarea>
+        <button type="submit" id="createHousebtn">Create House</button>
     </form>
-    <button id="createHousebtn" >Create House</button>
+
       </div>
 
-  <script src="../static/js/script.js"></script>
+  
+ <div class="footer">
+    <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
+ </div>
 </body>
 
 </html>
