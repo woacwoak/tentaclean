@@ -61,7 +61,7 @@ def signup():
         user = User.query.filter_by(username=username).first()
         # Check if user already exists
         if user:
-            flash("Username already exists")
+            flash("Username already exists", "success")
             return render_template("login.html", error="Username already exists")
         
         # Create new user in database
