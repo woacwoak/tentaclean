@@ -4,8 +4,6 @@ body {
     overflow: static;
 }
 
-<<<<<<< HEAD
-=======
 /* Page load animation class */
 .page-load {
     animation: fadeIn 0.5s ease-in;
@@ -21,7 +19,6 @@ body {
     }
 }
 
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 ::selection{
     background-color: #5BA4D8;
     color: white;
@@ -34,8 +31,6 @@ h1 {
     margin-top: 20px;
     text-align: left;
     margin-left: 20px;
-<<<<<<< HEAD
-=======
     animation: slideInFromTop 0.6s ease-out;
 }
 
@@ -48,7 +43,6 @@ h1 {
         opacity: 1;
         transform: translateY(0);
     }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #slogan {
@@ -68,8 +62,6 @@ h1 {
     left: 25vh;
     width: 500px;
     height: 500px;
-<<<<<<< HEAD
-=======
     animation: floatAnimation 3s ease-in-out infinite;
 }
 
@@ -80,7 +72,6 @@ h1 {
     50% {
         transform: translateY(-20px);
     }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #smallLogo {
@@ -104,8 +95,6 @@ h1 {
     border: none;
     background-color: #5ba4d8;
     color: white;
-<<<<<<< HEAD
-=======
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -119,7 +108,6 @@ h1 {
 #loginButton:active {
     transform: translateY(-1px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #signupButton{
@@ -131,8 +119,6 @@ h1 {
     cursor: pointer;
     font-size: 22px;
     color: black;
-<<<<<<< HEAD
-=======
     background-color: transparent;
     transition: all 0.3s ease;
 }
@@ -140,7 +126,6 @@ h1 {
 #signupButton:hover {
     color: #5ba4d8;
     transform: scale(1.05);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #signupButtonLoginPage{
@@ -152,8 +137,6 @@ h1 {
     cursor: pointer;
     font-size: 18px;
     color: black;
-<<<<<<< HEAD
-=======
     background-color: transparent;
     transition: all 0.3s ease;
 }
@@ -161,7 +144,6 @@ h1 {
 #signupButtonLoginPage:hover {
     color: #5ba4d8;
     transform: scale(1.05);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #loginButton:visited, #signupButton:visited, #findHouseButton:visited{
@@ -176,8 +158,6 @@ h1 {
     justify-content: center;
     height: 100vh;
     padding-left: 75vh;   
-<<<<<<< HEAD
-=======
     animation: slideInFromRight 0.8s ease-out;
 }
 
@@ -190,7 +170,6 @@ h1 {
         opacity: 1;
         transform: translateX(0);
     }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #signupPage {
@@ -199,9 +178,7 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 100vh;;  
-<<<<<<< HEAD
     margin-top: 0px; 
-=======
     margin-top: 0px;
     animation: zoomIn 0.5s ease-out;
 }
@@ -215,7 +192,6 @@ h1 {
         opacity: 1;
         transform: scale(1);
     }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #signupForm {
@@ -240,8 +216,6 @@ h1 {
     width: 500px;
     border-radius: 10px;
     border: 2px solid #B8B8B8;
-<<<<<<< HEAD
-=======
     transition: all 0.3s ease;
 }
 
@@ -250,7 +224,6 @@ h1 {
     border-color: #5BA4D8;
     box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
     transform: translateY(-2px);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #signupForm button {
@@ -266,8 +239,6 @@ h1 {
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
-<<<<<<< HEAD
-=======
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -281,7 +252,6 @@ h1 {
 #signupForm button:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #submit:hover {
@@ -310,10 +280,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 150px;
-<<<<<<< HEAD
 
 
-=======
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 100;
@@ -326,7 +294,6 @@ nav {
     to {
         transform: translateY(0);
     }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 nav a{
@@ -334,8 +301,6 @@ nav a{
     font-weight: 600;
     text-decoration: none;
     font-size: larger;
-<<<<<<< HEAD
-=======
     cursor: pointer;
     display: inline-block;
     padding: 10px 15px;
@@ -345,7 +310,6 @@ nav a{
 
 nav a:hover {
     opacity: 0.8;
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 
@@ -353,15 +317,12 @@ nav a:hover {
     position: static;
     width: 50px;
     filter: invert(100%);
-<<<<<<< HEAD
-=======
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 #accounticon:hover {
     transform: rotate(360deg) scale(1.1);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 *{
@@ -384,11 +345,9 @@ nav a:hover {
     color: white;
     border: 0px;
     font-size: 30px;
-<<<<<<< HEAD
     text-align: center;
   
    
-=======
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -401,24 +360,17 @@ nav a:hover {
 #createbtn:active, #joinbtn:active {
     transform: translateY(-1px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 #createbtn{
     background-color: #0A55CE;
     margin-top: 50px;
-<<<<<<< HEAD
     text-decoration: none;
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #joinbtn{ 
     background-color: #5BA4D8;
     margin-top: 50px;
-<<<<<<< HEAD
     
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #houseButtons {
@@ -468,23 +420,18 @@ nav a:hover {
 #House1 {
     border: 2px solid black;
     margin: 10px;
-<<<<<<< HEAD
    
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
     padding: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     width: 500px;
-<<<<<<< HEAD
     display: flex; /* Turn it into a flex container */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
     justify-content: center;
 
 
-=======
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
     animation-fill-mode: both;
@@ -505,7 +452,6 @@ nav a:hover {
         opacity: 1;
         transform: translateY(0);
     }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 html{
@@ -545,16 +491,12 @@ html{
     align-self: center;
     align-items: center;
     width: 760px;
-<<<<<<< HEAD
     padding: 10px;
     padding-left: 20px;
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #createhouseform label {
     align-self: flex-start;
-<<<<<<< HEAD
     width: 500px;
     margin-bottom: 5px;
 }
@@ -566,25 +508,6 @@ html{
     border: 2px solid #B8B8B8;
     width: 750px;
     font-size: 20px;
-=======
-}
-
-#createhouseform input {
-padding-left: 8px;
-height: 60px;
-border-radius: 5px;
-border: 1px solid grey;
-width: 750px;
-font-size: large;
-transition: all 0.3s ease;
-}
-
-#createhouseform input:focus {
-    outline: none;
-    border-color: #5BA4D8;
-    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
-    transform: translateY(-2px);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #descriptionInput {
@@ -597,11 +520,9 @@ transition: all 0.3s ease;
     line-height: 16px;
     width: 750px;
     font-size: large;
-font-family: "Inter", sans-serif;
-<<<<<<< HEAD
-border: 2px solid #B8B8B8;
-=======
-transition: all 0.3s ease;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
 }
 
 #descriptionInput:focus {
@@ -609,26 +530,10 @@ transition: all 0.3s ease;
     border-color: #5BA4D8;
     box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
     transform: translateY(-2px);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 
 #createHousebtn {
-<<<<<<< HEAD
-    width: 500px;
-    margin-top: 20px;
-    color: white;
-    background-color: #5ba4d8;
-    border: none;
-    cursor: pointer;
-    font-size: 40px;
-    align-self: center;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    margin-bottom: 100px;
-=======
     margin-top: 20px;
     border-radius: 10px;
     border: none;
@@ -650,7 +555,6 @@ transition: all 0.3s ease;
 #createHousebtn:active {
     transform: translateY(-1px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 #Taskpage{
@@ -671,12 +575,8 @@ transition: all 0.3s ease;
     margin-top: 100px;
     width: 300px;
     justify-content: center;
-<<<<<<< HEAD
-    align-items: center
-=======
     align-items: center;
     animation: fadeInUp 0.6s ease-out;
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 .task-btn {
@@ -692,9 +592,6 @@ transition: all 0.3s ease;
     align-items: center;
     gap: 12px;
     cursor: pointer;
-<<<<<<< HEAD
-    transition: 0.2s;
-=======
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -713,13 +610,10 @@ transition: all 0.3s ease;
 
 .task-btn:hover::before {
     left: 100%;
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 .task-btn:hover {
     background-color: #f5f5f5;
-<<<<<<< HEAD
-=======
     transform: translateX(5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-color: #5BA4D8;
@@ -727,7 +621,6 @@ transition: all 0.3s ease;
 
 .task-btn.completed {
     animation: completeTask 0.5s ease-out;
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 .circle {
@@ -736,8 +629,6 @@ transition: all 0.3s ease;
     border: 2px solid #999;
     border-radius: 50%;
     display: inline-block;
-<<<<<<< HEAD
-=======
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -745,25 +636,18 @@ transition: all 0.3s ease;
 .circle:hover {
     transform: scale(1.2);
     border-color: #5BA4D8;
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 .create-btn {
     background-color: #b8b8b8;
     border: none;
     color: #4b4b4b;
-<<<<<<< HEAD
-=======
     transition: all 0.3s ease;
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 .create-btn:hover {
     background-color: #a9a9a9;
-<<<<<<< HEAD
-=======
     transform: scale(1.02);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 .task-icon {
@@ -771,15 +655,12 @@ transition: all 0.3s ease;
     height: 20px;
     margin-left: auto;
     cursor: pointer;
-<<<<<<< HEAD
-=======
     transition: all 0.3s ease;
 }
 
 .task-icon:hover {
     transform: scale(1.2) rotate(10deg);
     filter: brightness(0.8);
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 .plus {
@@ -801,7 +682,6 @@ transition: all 0.3s ease;
     font-weight: normal;
 }
 
-<<<<<<< HEAD
 @media screen and (width<=320px){
     .nav{
         display: none;
@@ -810,18 +690,12 @@ transition: all 0.3s ease;
         font-size: 20px;
     }
     #createbtn{
-       
         font-size: 20px;
     }
     #joinbtn{
-       
         font-size: 20px;
     }
-    
-
 }
-=======
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
 .alert {
@@ -834,6 +708,17 @@ transition: all 0.3s ease;
     animation: fadeout 3s forwards;
     animation-delay: 2s;
 }
+
+/* @keyframes slideInAlert {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
 
 @keyframes fadeout {
     to{opacity: 0;}
@@ -849,8 +734,6 @@ transition: all 0.3s ease;
     background-color: #e74c3c;
 }
 /* END OF LOGIN ans SIGNUP ERROR HANDLING*/
-<<<<<<< HEAD
-=======
 
 /* Task animations */
 @keyframes slideIn {
@@ -982,4 +865,3 @@ input:focus, textarea:focus {
         box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
     }
 }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
