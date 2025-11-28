@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join or create house</title>
-        <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
 </head>
 
-<body>
-    <h1>Welcome, {{user.name}}</h1>
+<header>
 
-    <a href="{{url_for('createhouse')}}" id="createbtn" >Create House</a>
-    <a href="{{url_for('houselist')}}" id="joinbtn" >Join House</a>
+    <nav class="nav">
+        <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
+        <a class="Home" href="{{url_for('home')}}">Home</a>
+        <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
+        <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
+        <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
+    </nav>
+
+</header>
+
+<body>
+    <h1 class="intro">Welcome, [User Name]</h1>
+
+    <div id="houseButtons">
+  <a href="{{url_for('createhouse')}}" id="createbtn" >Create House</a>
+  <a href="#allhouses" id="joinbtn" >Join House</a>
+  </div>
 </body>
 </html>
