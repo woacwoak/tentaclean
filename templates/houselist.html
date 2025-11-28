@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House List</title>
         <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" href="./icons/app icon/App icon.svg" type="image/x-icon">
+       <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
 </head>
 
 <header>
@@ -18,30 +18,23 @@
     </nav>
 </header>
 <body>
-    <!-- Handle error (flashed) messages from Flask -->
-    {% with messages = get_flashed_messages(with_categories=True) %}
-      
-      {% if messages %}
-        <!-- Loop through all flashed messages -->
-        {% for category, message in messages %}
-          
-          <!-- Bootstrap-style alert box -->
-          <div class="alert alert-{{ category }}">
-            {{ message }}
-          </div>
-
-        {% endfor %}
-      {% endif %}
-
-    {% endwith %}
-    
     <h1 class="yourhouses">Your Houses</h1>
 
-      <div id="yourhousescontainer">
-    <div id="House1">
-        <h2 class="house">House 1</h2>
-        <button id="joinbtn" >Tasks</button>
-  </div>
-  </div>
+    <div id="yourhousescontainer">
+    {% if houses %}
+        {% for house in houses %}
+        <div id="House1">
+            <h2 class="house">{{house.name}}</h2>
+            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Tasks</button>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No available games</p>
+    {% endif %}
+    
+    </div>
+   <div class="footer">
+    <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
+ </div>
 </body>
 </html>
