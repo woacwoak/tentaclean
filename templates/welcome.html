@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <h1>Welcome, [User Name]</h1>
+    <h1>Welcome, {{user.name}}</h1>
 
-     <a href="{{url_for('createhouse')}}" id="createbtn" >Create House</a>
-  <a href="#allhouses" id="joinbtn" >Join House</a>
+    <a href="{{url_for('createhouse')}}" id="createbtn" >Create House</a>
+    <a href="{{url_for('houselist')}}" id="joinbtn" >Join House</a>
 </body>
 </html>
