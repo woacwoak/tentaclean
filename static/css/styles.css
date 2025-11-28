@@ -1,3 +1,8 @@
+<head
+name="viewport" content="width=device-width, initial-scale=1"
+>
+
+
 body {
     font-family: "Inter", sans-serif;
     background-color: #f0f0f0;
@@ -39,10 +44,10 @@ h1 {
 
 #smallLogo {
     position: absolute;
-    top: 2vh;
-    left: 100vh;
-    width: 100px;
-    height: 100px;
+    top: 12px;
+    right: 12px;      /* use right instead of left:100vh */
+    width: 80px;
+    height: 80px;
 }
 
 #loginButton{
@@ -92,8 +97,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding-left: 75vh;   
+    height: 100vh; 
 }
 
 #signupPage {
@@ -450,10 +454,9 @@ border: 2px solid #B8B8B8;
     font-weight: normal;
 }
 
-@media screen and (width<=320px){
-    .nav{
-        display: none;
-    }
+@media screen and (max-width: 320px){
+nav { display: none; }
+
     .intro {
         font-size: 20px;
     }
@@ -465,7 +468,21 @@ border: 2px solid #B8B8B8;
        
         font-size: 20px;
     }
+    #signupForm button {
 
+        width: 150px;
+    }    
+
+    #signupForm input {
+
+        width: 270px;
+        height: 20px;
+    }
+
+    #signupPage {
+
+        height: 50vh;
+    }
 }
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
@@ -495,3 +512,4 @@ border: 2px solid #B8B8B8;
     background-color: #e74c3c;
 }
 /* END OF LOGIN ans SIGNUP ERROR HANDLING*/
+
