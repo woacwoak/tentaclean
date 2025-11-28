@@ -291,8 +291,6 @@ nav {
     z-index: 100;
 }
 
-<<<<<<< HEAD
-=======
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
@@ -300,7 +298,6 @@ nav {
     to {
         transform: translateY(0);
     }
->>>>>>> 1e771d6c2ca62588bbc6c1a9deaaada2bc0ec73e
 }
 
 nav a{
@@ -639,11 +636,12 @@ html{
     #signupForm input {
         width: 250px;
         margin-bottom: 20px;
+        font-size: 20px;
     }
 
     #signupForm label {
         width: 250px;
-
+        font-size: 20px;
     }
 
     #signupForm button {
@@ -660,6 +658,8 @@ html{
         width: 75px;
         margin-bottom: 10px;
     }
+
+   
 }
 
 
