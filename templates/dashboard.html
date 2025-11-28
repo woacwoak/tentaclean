@@ -42,18 +42,16 @@
   <h2 class="houses">Your Houses</h2>
 
   <div id="housescontainer">
-    <section id="allhouses">
-    {% if houses %}
-      {% for house in houses %}
-        <div id="House1">
-            <h2 class="house">{{house.name}}</h2>
-            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Tasks</button>
-        </div>
-      {% endfor %}
-    {% else %}
-      <p>No available games</p>
-    {% endif %}
-    </section>
+  {% if houses %}
+    {% for house in houses %}
+      <div id="House1">
+          <h2 class="house">{{house.name}}</h2>
+          <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Tasks</button>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No available games</p>
+  {% endif %}
   </div>
 
 </body>
