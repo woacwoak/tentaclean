@@ -126,6 +126,14 @@ def welcome():
     user=User.query.get(session["user_id"])
     return render_template("welcome.html", user=user)
 
+# DASHBOARD PAGE
+@app.route("/dashboard")
+@login_required
+def dashboard():
+    user=User.query.get(session["user_id"])
+    return render_template("dashboard.html", user=user)
+
+
 # HOUSE LIST PAGE
 @app.route("/houselist")
 def houselist():    
