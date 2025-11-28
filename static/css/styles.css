@@ -31,7 +31,7 @@ body {
 h1 {
     font-size: 40px;
     position:static;
-    width: 100%;
+    width: 100vw;
     margin-top: 20px;
     text-align: left;
     margin-left: 20px;
@@ -63,7 +63,7 @@ h1 {
 #logo {
     position: absolute;
     
-    left: 25vh;
+    left: 12vw;
     width: 500px;
     height: 500px;
     animation: floatAnimation 3s ease-in-out infinite;
@@ -168,7 +168,7 @@ h1 {
     justify-content: center;
     width: 500px;
     height: 500px;
-    
+    margin-bottom: 100px;
 }
 
 #logoAndWelcome {
@@ -179,6 +179,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 200px;
 }
 
 #welcomePage {
@@ -187,7 +188,6 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    padding-left: 75vh;   
     animation: slideInFromRight 0.8s ease-out;
 }
 
@@ -826,6 +826,10 @@ html{
         font-size: 120%;
 
     }
+
+    #logo {
+        left: 5vw;
+    }
 }
 
 @media screen and (width<=769px){
@@ -913,6 +917,42 @@ html{
         font-size: 120%;
 
     }
+
+    
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 300px;
+    height: 300px;
+    margin-left: 25vw;
+   }
+
+   #logo {
+    width: 300px;
+    height: 300px;
+    left: auto;
+   }
+
+   #welcomePage {
+    margin-top: 12vh;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 280px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
+
 }
 
 @media screen and (width<=426px){
@@ -1010,6 +1050,47 @@ html{
         font-size: 120%;
         
     }
+
+
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 250px;
+    height: 250px;
+    margin-left: 0;
+   }
+
+   #logo {
+    width: 250px;
+    height: 250px;
+    margin-top: 180px;
+   }
+
+   #logoAndWelcome {
+    flex-direction: column;
+    gap: 0;
+   }
+
+   #welcomePage {
+    margin-bottom: 50px;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 320px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
+
 }
 
 @media screen and (width<=376px){
@@ -1059,12 +1140,6 @@ html{
         width: 75px;
         margin-bottom: 10px;
     }
-<<<<<<< HEAD
-
-     #smallLogo {
-        margin-top: 10px;
-    }
-=======
     .nav{
         display: none;
     }
@@ -1117,7 +1192,46 @@ html{
 
     }
 
->>>>>>> 32f7a9e5d8a408dca46f4779f1e92e2e7a9fc8f2
+
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 200px;
+    height: 200px;
+   }
+
+   #logo {
+    width: 200px;
+    height: 200px;
+    left: auto;
+    margin-top: 200px;
+   }
+
+   #logoAndWelcome {
+    flex-direction: column;
+    gap: 0;
+   }
+
+   #welcomePage {
+    margin-bottom: 50px;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 280px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
+
 }
    
 @media screen and (width<=321px){
@@ -1169,13 +1283,48 @@ html{
         width: 270px;
     }
 
-<<<<<<< HEAD
-=======
    .navmobile {
     width: 100vw;
    }
 
->>>>>>> 32f7a9e5d8a408dca46f4779f1e92e2e7a9fc8f2
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 200px;
+    height: 200px;
+   }
+
+   #logo {
+    width: 200px;
+    height: 200px;
+    left: auto;
+    margin-top: 175px;
+   }
+
+   #logoAndWelcome {
+    flex-direction: column;
+    gap: 0;
+   }
+
+   #welcomePage {
+    margin-bottom: 50px;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 250px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
 }
 
 
