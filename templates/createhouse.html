@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a house</title>
+    
+    <link rel="stylesheet" href="../static/css/styles.css">  <!--CSS Linking-->
+    <link rel="icon" href="./icons/app icon/App icon.svg" type="image/x-icon">
+    
+</head>
+
+<header>
+
+    <nav class="nav">
+        <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
+        <a class="Home" href="{{url_for('home')}}">Home</a>
+        <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
+        <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
+        <img src="../static/img/icons/account.circle.svg" alt="account" id="accounticon">
+    </nav>
+
+</header>
+
+<body>
+
+    <h1 id="createaHouse">Create a House</h1>
+    
+    <div id="formContainer">
+
+    <form id="createhouseform">
+      <label for="House name">House name:</label>
+      <input
+        type="text"
+        id="houseName"
+        name="House name"
+        placeholder="e.g. My Home"
+        required
+      />
+
+          
+      <label for="Address">Address:</label>
+      <input
+        type="text"
+        id="address"
+        name="Address"
+        placeholder="e.g. Elm Street 4"
+        required
+      />
+
+                
+      <label for="Capacity">Capacity:</label>
+      <input
+        type="text"
+        id="capacity"
+        name="Capacity"
+        placeholder="e.g. 10"
+        required
+    />
+
+                
+      <label for="Description">Description:</label>
+      <textarea
+        type="text"
+        id="descriptionInput"
+        name="Description"
+        placeholder="e.g. My student Home"
+        required></textarea>
+    </form>
+    <button id="createHousebtn" >Create House</button>
+      </div>
+
+  
+
+</body>
+
+</html>

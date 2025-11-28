@@ -1,7 +1,7 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: #f0f0f0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 ::selection{
@@ -38,11 +38,18 @@ h1 {
 }
 
 #smallLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 2vh;
-    left: 100vh;
-    width: 100px;
+    width:100%;
     height: 100px;
+}
+
+#smallLogo img {
+    width: 100px;
+    height: auto;
+    
 }
 
 #loginButton{
@@ -154,55 +161,47 @@ h1 {
     font-size: 42px;
 }
 
-.nav{
-   
-    flex-direction: column;
-    display: flex;
-    background-color: #5BA4D8;
-    padding: 25px;
-    padding-top: 1px;
-    padding-bottom: 20px;
-    
-    
-}
 
 .Tentaclean{
-    font-size: 170%;
-    padding: 120px;
-    color: black;
+    font-size: 170%;    
+    color: white;
     text-decoration: none;
-    
-  
+    text-align: center;
+    font-weight: bold;
 }
 
-.Home{
-    padding: 120px;
-    color: black;
-    text-decoration: none;
-    font-size: larger;
-   
-}
-
-.HouseList{
-    padding: 120px;
-    color: black;
-    text-decoration: none;
-    font-size: larger;
+nav {
+    height:100px;
+    background-color: #5BA4D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
 
 }
 
-.Dashboard{
-    padding: 120px;
-    color: black;
+nav a{
+    color: white;
+    font-weight: 600;
     text-decoration: none;
     font-size: larger;
 }
+
+nav button{
+    background-color: #5BA4D8;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+}
+
 
 #accounticon{
     position: static;
-    padding-left: 150px;
-    margin-top: 20px;
     width: 50px;
+    filter: invert(100%);
 }
 
 *{
@@ -212,7 +211,7 @@ h1 {
 
 .intro{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 #createbtn, #joinbtn{
@@ -230,10 +229,12 @@ h1 {
 }
 #createbtn{
     background-color: #0A55CE;
+    margin-top: 50px;
 }
 
 #joinbtn{ 
     background-color: #5BA4D8;
+    margin-top: 50px;
 }
 
 #houseButtons {
@@ -242,14 +243,19 @@ h1 {
     flex-direction: row;
     justify-content: center;
     padding-top: 30px;
+    
 
+}
+
+.house{
+    font-size: 200%;
 }
 
 .houses{
     margin: 50px;
     margin-top: 150px;
     text-align: center;
-    font-size: larger;
+    font-size: 200%
 }
 
 #housescontainer{
@@ -263,15 +269,28 @@ h1 {
     
 }
 
+.yourhouses{
+    margin: 20px;
+    margin-top: 100px;
+    font-weight: lighter;
+}
+
+#yourhousescontainer{
+    margin: 20px;
+    margin-top: 40px;
+
+}
+
 #House1 {
     border: 2px solid black;
     margin: 10px;
+    
     padding: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     width: 500px;
-   
+
 
 }
 
@@ -281,9 +300,8 @@ html{
 }
 
 #logOut { 
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: relative;
+    margin: 15px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -300,26 +318,357 @@ html{
     background-color: #3991D0;
 }
 
+.signupBody {
+    overflow-y: hidden;
+}
+
 @font-face {
     font-family: Inter;
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
 
-@media screen and (width<=320px){
-    
-}
-
-@media screen and (width<=320px){
-    #createAccount {
-        font-size: 32px;
-        top: 100px;
+@media screen and (width<=1441px){
+    #signupForm input {
+        width: 550px;
+        margin-bottom: 30px;
+        font-size: 26px;
     }
 
-   .Dashboard {
-    background: no-repeat center/20% url(/Images/dashboard_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg);
-    font-size: 0px;
+    #signupForm label {
+        width: 550px;
+        font-size: 26px;
+    }
+
+    #signupForm button {
+        width: 570px;
+        font-size: 26px;
+    }    
+
+    #signupForm {
+        margin-top: 100px;
+    }
+
+    #createAccount {
+        font-size: 40px;
+        top: 125px;
+    }
+
+    #smallLogo img {
+        width: 100px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (width<=1025px){
+    #signupForm input {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 350px;
+    }
+
+    #signupForm button {
+        width: 370px;
+        
+    }    
+
+    #signupForm {
+        margin-top: 100px;
+    }
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width<=769px){
+    #signupForm input {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 350px;
+
+    }
+
+    #signupForm button {
+        width: 370px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width<=426px){
+    #signupForm input {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 350px;
+
+    }
+
+    #signupForm button {
+        width: 370px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (width<=376px){
+    #signupForm input {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 300px;
+
+    }
+
+    #signupForm button {
+        width: 320px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
 }
    
+@media screen and (width<=321px){
+    #signupForm input {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    #signupForm label {
+        width: 250px;
+
+    }
+
+    #signupForm button {
+        width: 270px;
+        
+    }    
+
+    #createAccount {
+        font-size: 28px;
+        top: 90px;
+    }
+
+    #smallLogo img {
+        width: 75px;
+        margin-bottom: 10px;
+    }
 }
 
 
+
+#createaHouse{
+    font-weight: lighter;
+    text-align: center;
+
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+}
+
+#formContainer{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+#createhouseform {
+     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    font-size: 22px;
+    align-self: center;
+    align-items: center;
+    width: 760px;
+}
+
+#createhouseform label {
+    align-self: flex-start;
+}
+
+#createhouseform input {
+padding-left: 8px;
+height: 60px;
+border-radius: 5px;
+border: 1px solid grey;
+width: 750px;
+font-size: large;
+}
+
+#descriptionInput {
+    height: 200px !important;
+    padding-top: 5px;
+    text-align: left;
+    vertical-align: top;
+     padding-left: 8px;
+     padding-top: 16px;
+    line-height: 16px;
+    width: 750px;
+    font-size: large;
+font-family: "Inter", sans-serif;
+}
+
+
+#createHousebtn {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5BA4D8;
+    font-size: 22px;
+    height: 50px;
+    width: 200px;
+}
+
+#Taskpage{
+    left: 650px;
+    position: absolute;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    font: "Inter";
+    font-weight: normal;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+    justify-content: center;
+    align-items: center
+}
+
+.task-btn {
+    width: 423px;
+    height: 65px;
+    padding: 10px 16px;
+    border: 2px solid #cfcfcf;
+    background-color: white;
+    border-radius: 18px;
+    font-size: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.task-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.circle {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.create-btn {
+    background-color: #b8b8b8;
+    border: none;
+    color: #4b4b4b;
+}
+
+.create-btn:hover {
+    background-color: #a9a9a9;
+}
+
+.task-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.plus {
+    font-size: 20px;
+    margin-right: 4px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #5ba4d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 25px;
+    font: "Inter";
+    font-weight: normal;
+}
+
+/* LOGIN ans SIGNUP ERROR HANDLING*/
+/* Base alert style */
+.alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 10px 10px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Green for success messages */
+.alert-success {
+    background-color: #2ecc71;
+}
+
+/* Red for error messages */
+.alert-error {
+    background-color: #e74c3c;
+}
+/* END OF LOGIN ans SIGNUP ERROR HANDLING*/

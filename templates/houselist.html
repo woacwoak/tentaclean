@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-        <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="icon" href="./static/img/App_icon_circle.svg" type="image/x-icon">
+    <title>House List</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" href="./icons/app icon/App icon.svg" type="image/x-icon">
 </head>
+
 <header>
     <nav class="nav">
         <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
         <a class="Home" href="{{url_for('home')}}">Home</a>
         <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
         <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
-        <button id="logOut">Log out</button>
         <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
     </nav>
 </header>
@@ -23,7 +23,7 @@
       
       {% if messages %}
         <!-- Loop through all flashed messages -->
-        {% for category, message in messages %} 
+        {% for category, message in messages %}
           
           <!-- Bootstrap-style alert box -->
           <div class="alert alert-{{ category }}">
@@ -34,36 +34,14 @@
       {% endif %}
 
     {% endwith %}
-
     
-    <h1 class="intro">Welcome, [User Name]</h1>
-<div id="houseButtons">
-  <button id="createbtn" >Create House</button>
-  <button id="joinbtn" >Join House</button>
-  </div>
+    <h1 class="yourhouses">Your Houses</h1>
 
-  <h2 class="houses">Houses</h2>
-
-  <div id="housescontainer">
+      <div id="yourhousescontainer">
     <div id="House1">
         <h2 class="house">House 1</h2>
-        <button id="joinbtn" >Join House</button>
+        <button id="joinbtn" >Tasks</button>
   </div>
-      <div id="House1">
-        <h2 class="house">House 2</h2>
-        <button id="joinbtn" >Join House</button>
   </div>
-      <div id="House1">
-        <h2 class="house">House 3</h2>
-        <button id="joinbtn" >Join House</button>
-  </div>
-      <div id="House1">
-        <h2 class="house">House 4</h2>
-        <button id="joinbtn" >Join House</button>
-  </div>
- 
-
-  </div>
-
 </body>
 </html>

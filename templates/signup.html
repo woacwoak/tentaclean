@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
   </head>
-  <body>
+  <body class="signupBody">
     <main>
-       
-        <img src="../static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo" id="smallLogo">
-
+       <div id="smallLogo">
+        <img src="../static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo">
+</div>
     </main>
     <div id="signupPage">
    <p id="createAccount">Create an account</p>
-    <form id="signupForm" action="{{url_for('login')}}" method="post"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
+    <form id="signupForm" action="{{url_for('signup')}}" method="POST"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
       <label for="username">Username:</label>
       <!--Name in this input is needed for the Flask singup and login logic-->
       <input

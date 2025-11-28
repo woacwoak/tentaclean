@@ -9,6 +9,22 @@
     <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
   </head>
   <body>
+    <!-- Handle error (flashed) messages from Flask -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      
+      {% if messages %}
+        <!-- Loop through all flashed messages -->
+        {% for category, message in messages %}
+          
+          <!-- Bootstrap-style alert box -->
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+
+        {% endfor %}
+      {% endif %}
+
+    {% endwith %}
     <main>
        
         <img src="../static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo" id="smallLogo">
@@ -16,17 +32,19 @@
     </main>
     <div id="signupPage">
    <p id="createAccount">Login</p>
-    <form id="signupForm">
-      <label for="username">Email:</label>
+    <form id="signupForm" action="{{url_for('login')}}" method="POST"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
+      <label for="email">Email:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
         type="text"
-        id="username"
-        name="username"
-        placeholder="What's your username?"
+        id="email"
+        name="email"
+        placeholder="What's your email?"
         required
       />
       
       <label for="password">Password:</label>
+      <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
         type="password"
         id="password"
