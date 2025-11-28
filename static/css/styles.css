@@ -291,8 +291,6 @@ nav {
     z-index: 100;
 }
 
-<<<<<<< HEAD
-=======
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
@@ -300,7 +298,6 @@ nav {
     to {
         transform: translateY(0);
     }
->>>>>>> 1e771d6c2ca62588bbc6c1a9deaaada2bc0ec73e
 }
 
 nav a{
@@ -421,6 +418,8 @@ nav button{
     margin: 20px;
     margin-top: 100px;
     font-weight: lighter;
+    text-align: center;
+    justify-content: center;
 }
 
 #yourhousescontainer{
@@ -662,7 +661,22 @@ html{
     }
 }
 
+@media screen and (width<=320px){
+    .nav{
+        display: none;
+    
+    }
+    .footer{
+        display: none;
+    }
+    .intro{
+        font-size: 100%;
+    }
+    #houseButtons{
+        
 
+    }
+}
 
 #createaHouse{
     font-weight: lighter;
