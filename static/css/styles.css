@@ -279,7 +279,7 @@ h1 {
     font-weight: bold;
 }
 
-nav {
+.nav {
     height:100px;
     background-color: #5BA4D8;
     display: flex;
@@ -291,6 +291,20 @@ nav {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 100;
+}
+.navmobile {
+    height:100px;
+    background-color: #5BA4D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+    display: none;
 }
 
 @keyframes slideDown {
@@ -716,7 +730,6 @@ html{
 }
 
 
-
 #createaHouse{
     font-weight: lighter;
     text-align: center;
@@ -939,6 +952,61 @@ transition: all 0.3s ease;
     font-weight: normal;
 }
 
+
+@media screen and (width<=320px){
+    .nav{
+        display: none;
+    }
+    .navmobile{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+       height: 50px;
+
+    }
+    .intro {
+        font-size: 20px;
+    }
+    #createbtn{
+        font-size: 20px;
+    }
+    #joinbtn{
+        font-size: 20px;
+    }
+    #signupForm button {
+
+        width: 150px;
+    }    
+
+    #signupForm input {
+
+        width: 270px;
+        height: 20px;
+    }
+
+    #signupPage {
+
+        height: 50vh;
+    }
+    .yourhouses{
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 70px;
+        font-size: 150%;
+        
+    }
+    #House1{
+        width: 250px;
+        height: 100px;
+
+    }
+    #joinbtn{
+        margin-top: 20px;
+    }
+}
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
 .alert {
