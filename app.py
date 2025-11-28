@@ -68,11 +68,15 @@ def signup():
         username = request.form["username"]
         email = request.form["email"]
         password = request.form["password"]
-        user = User.query.filter_by(username=username).first()
-        # Check if user already exists
-        if user:
-            flash("Username already exists", "success")
-            return render_template("login.html", error="Username already exists")
+
+
+        if User.query.filter_by(username=username).first():
+            flash("Username already exists", "error")
+            return render_template("signup.html")
+        
+        if User.query.filter_by(email=email).first():
+            flash("Email already registered", "error")
+            return render_template("signup.html")
         
         # Create new user in database
         new_user = User(username=username, email=email)
@@ -108,10 +112,10 @@ def login():
         
         flash("Invalid username or password.", "error")
         return render_template("login.html")
-        
+    
     return render_template("login.html")
     
-@app.route("/logout", methods=["Post"])
+@app.route("/logout")
 def logout():
     session.pop("username", None)
     session.pop("user_id", None)
@@ -125,6 +129,14 @@ def logout():
 def welcome():
     user=User.query.get(session["user_id"])
     return render_template("welcome.html", user=user)
+
+# DASHBOARD PAGE
+@app.route("/dashboard")
+@login_required
+def dashboard():
+    user=User.query.get(session["user_id"])
+    return render_template("dashboard.html", user=user)
+
 
 # HOUSE LIST PAGE
 @app.route("/houselist")
@@ -143,6 +155,8 @@ def createhouse():
         description = request.form.get("description")
         password = request.form.get("password")
 
+        user = User.query.get(session["user_id"])
+
         if not all([name, address, capacity, description, password]):
             flash("Fill all the information, please", "error")
             return redirect(url_for("createhouse"))
@@ -153,7 +167,7 @@ def createhouse():
             capacity=int(capacity),
             description=description,
             password=password,
-            ownerid=User.id
+            ownerid=user.id
         )
         db.session.add(new_house)
         db.session.commit()

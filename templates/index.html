@@ -8,19 +8,40 @@
     <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
   </head>
-  <body>
+  <body id="tentacleanBody">
+
+  <!-- Handle error (flashed) messages from Flask -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      
+      {% if messages %}
+        <!-- Loop through all flashed messages -->
+        {% for category, message in messages %} 
+          
+          <!-- Bootstrap-style alert box -->
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+
+        {% endfor %}
+      {% endif %}
+
+    {% endwith %}
+
     <main>
         <h1>Tentaclean</h1>  
     </main>
-    <img src="../static/img/icons/Octy.svg" alt="logo" id="logo">
-    
-    <div id="welcomePage">
 
+    <div id="logoAndWelcome">
+    <div id="octyLogo">
+    <img src="../static/img/icons/Octy.svg" alt="logo" id="logo">
+    </div>
+
+    <div id="welcomePage">
       <div id="slogan">
     <p id="roommates">Roommates united, <br> mess divided.</p>
     <p id="moreArms">More arms. Less mess.</p>
     </div>
-
+  
     <a id="loginButton" href="{{ url_for('login')}}">Log in</a>
     <!-- onclick="directToLogin() I REMOVED ONCLICK AND USED FLASK url_for FUNCTION.
     IT WORKS WHEN YOU SET UP FLASK, BUT DOESN'T WORK WHEN YOU OPEN HTML WITH LIVE SERVER-->
@@ -28,10 +49,7 @@
     <!-- onclick="directToLogin() I REMOVED ONCLICK AND USED FLASK url_for FUNCTION.
     IT WORKS WHEN YOU SET UP FLASK, BUT DOESN'T WORK WHEN YOU OPEN HTML WITH LIVE SERVER-->
     </div>
-
- <div class="footer">
-    <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
- </div>
+</div>
     <script src="../static/js/script.js"></script>
   </body>
 </html>
