@@ -831,25 +831,8 @@ transition: all 0.3s ease;
     font-size: 15px;
     color: #fff;
     font-weight: 500;
-
-<<<<<<< HEAD
     animation: fadeout 3s forwards;
     animation-delay: 2s;
-=======
-    animation: slideInAlert 0.5s ease-out, fadeout 3s forwards;
-    animation-delay: 0s, 2s;
-}
-
-@keyframes slideInAlert {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
->>>>>>> 084327c4f7462c7a368dd1382a356ba648823319
 }
 
 @keyframes fadeout {
