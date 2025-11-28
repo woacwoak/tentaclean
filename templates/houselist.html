@@ -20,12 +20,19 @@
 <body>
     <h1 class="yourhouses">Your Houses</h1>
 
-      <div id="yourhousescontainer">
-    <div id="House1">
-        <h2 class="house">House 1</h2>
-        <button id="joinbtn" >Tasks</button>
-  </div>
-  </div>
+    <div id="yourhousescontainer">
+    {% if houses %}
+        {% for house in houses %}
+        <div id="House1">
+            <h2 class="house">{{house.name}}</h2>
+            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Tasks</button>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No available games</p>
+    {% endif %}
+    
+    </div>
    <div class="footer">
     <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
  </div>

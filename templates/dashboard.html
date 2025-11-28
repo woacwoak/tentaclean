@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-        <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="icon" href="./static/img/App_icon_circle.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" href="../static/img/icons/App_icon_circle.svg" type="image/x-icon">
 </head>
+<body class="page-load">
 <header>
     <nav class="nav">
+<<<<<<< HEAD
         <a class="Tentaclean" href="{{url_for('home')}}">Tentaclean</a>
         <a class="Home" href="{{url_for('home')}}">Home</a>
         <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
         <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
+        <button id="logOut">Log out</button>
         <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
+=======
+        <div style="display: flex; gap: 30px; align-items: center; width: 100%;">
+            <a class="Tentaclean" href="{{url_for('home')}}" style="margin-right: auto;">Tentaclean</a>
+            <a class="HouseList" href="{{url_for('houselist')}}">House List</a>
+            <a class="CreateHouse" href="/createhouse">Create a House</a>
+            <a class="Dashboard" href="{{url_for('dashboard')}}">Dashboard</a>
+            <img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon">
+        </div>
+>>>>>>> 1e771d6c2ca62588bbc6c1a9deaaada2bc0ec73e
     </nav>
 </header>
-<body>
     <!-- Handle error (flashed) messages from Flask -->
     {% with messages = get_flashed_messages(with_categories=True) %}
       
       {% if messages %}
         <!-- Loop through all flashed messages -->
-        {% for category, message in messages %}
+        {% for category, message in messages %} 
           
           <!-- Bootstrap-style alert box -->
           <div class="alert alert-{{ category }}">
@@ -38,30 +49,24 @@
 <h1 class="intro">Welcome, {{username}}[User Name]</h1>
 <div id="houseButtons">
   <a href="{{url_for('createhouse')}}" id="createbtn" >Create House</a>
-  <a id="joinbtn" >Join House</a>
+  <a href="#allhouses" id="joinbtn" >Join House</a>
   </div>
 
-  <h2 class="houses">Houses</h2>
+  <h2 class="houses">All Available Houses</h2>
 
   <div id="housescontainer">
-    <div id="House1">
-        <h2 class="house">House 1</h2>
-        <a id="joinbtn" >Join House</a>
-  </div>
-      <div id="House1">
-        <h2 class="house">House 2</h2>
-        <a id="joinbtn" >Join House</a>
-  </div>
-      <div id="House1">
-        <h2 class="house">House 3</h2>
-        <a id="joinbtn" >Join House</a>
-  </div>
-      <div id="House1">
-        <h2 class="house">House 4</h2>
-        <a id="joinbtn" >Join House</a>
-  </div>
- 
-
+    <section id="allhouses">
+    {% if houses %}
+      {% for house in houses %}
+        <div id="House1">
+            <h2 class="house">{{house.name}}</h2>
+            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Tasks</button>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No available games</p>
+    {% endif %}
+    </section>
   </div>
  <div class="footer">
     <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
