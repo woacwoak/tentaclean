@@ -68,11 +68,15 @@ def signup():
         username = request.form["username"]
         email = request.form["email"]
         password = request.form["password"]
-        user = User.query.filter_by(username=username).first()
-        # Check if user already exists
-        if user:
-            flash("Username already exists", "success")
-            return render_template("login.html", error="Username already exists")
+
+
+        if User.query.filter_by(username=username).first():
+            flash("Username already exists", "error")
+            return render_template("signup.html")
+        
+        if User.query.filter_by(email=email).first():
+            flash("Email already registered", "error")
+            return render_template("signup.html")
         
         # Create new user in database
         new_user = User(username=username, email=email)
