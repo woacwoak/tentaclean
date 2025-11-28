@@ -18,14 +18,14 @@
     </nav>
 </header>
 <body>
-    <h1 class="yourhouses">Your Houses</h1>
+    <h1 class="yourhouses">Houses</h1>
 
     <div id="yourhousescontainer">
     {% if houses %}
         {% for house in houses %}
         <div id="House1">
             <h2 class="house">{{house.name}}</h2>
-            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Tasks</button>
+            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Join</button>
         </div>
         {% endfor %}
     {% else %}

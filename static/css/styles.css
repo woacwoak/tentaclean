@@ -441,6 +441,8 @@ nav button{
     margin: 20px;
     margin-top: 100px;
     font-weight: lighter;
+    text-align: center;
+    justify-content: center;
 }
 
 #yourhousescontainer{
@@ -458,15 +460,6 @@ nav button{
     padding-bottom: 50px;
     text-align: center;
     width: 500px;
-<<<<<<< HEAD
-    display: flex; /* Turn it into a flex container */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center;
-
-
-=======
->>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
     animation-fill-mode: both;
@@ -692,7 +685,22 @@ html{
     }
 }
 
+@media screen and (width<=320px){
+    .nav{
+        display: none;
+    
+    }
+    .footer{
+        display: none;
+    }
+    .intro{
+        font-size: 100%;
+    }
+    #houseButtons{
+        
 
+    }
+}
 
 #createaHouse{
     font-weight: lighter;
@@ -722,28 +730,10 @@ html{
     align-self: center;
     align-items: center;
     width: 760px;
-<<<<<<< HEAD
-    padding: 10px;
-    padding-left: 20px;
-=======
->>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
 }
 
 #createhouseform label {
     align-self: flex-start;
-<<<<<<< HEAD
-    width: 500px;
-    margin-bottom: 5px;
-}
-
-#createhouseform input {
-    padding-left: 8px;
-    height: 60px;
-    border-radius: 15px;
-    border: 2px solid #B8B8B8;
-    width: 750px;
-    font-size: 20px;
-=======
 }
 
 #createhouseform input {
@@ -761,7 +751,6 @@ transition: all 0.3s ease;
     border-color: #5BA4D8;
     box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
     transform: translateY(-2px);
->>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
 }
 
 #descriptionInput {
@@ -774,14 +763,8 @@ transition: all 0.3s ease;
     line-height: 16px;
     width: 750px;
     font-size: large;
-<<<<<<< HEAD
-    font-family: "Inter", sans-serif;
-    border: 2px solid #B8B8B8;
-    transition: all 0.3s ease;
-=======
 font-family: "Inter", sans-serif;
 transition: all 0.3s ease;
->>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
 }
 
 #descriptionInput:focus {
@@ -942,6 +925,7 @@ transition: all 0.3s ease;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media screen and (max-width: 320px){
 nav { display: none; }
 
@@ -982,6 +966,8 @@ nav { display: none; }
 }
 =======
 >>>>>>> 0c3b37b5a7fbf874e565a9b849b73c93ab704fb5
+=======
+>>>>>>> ca8ea6a0d82a608894487f3fdc333fbedb38dfec
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
 .alert {
