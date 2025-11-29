@@ -30,9 +30,9 @@
         <img src="../static/img/icons/App_icon_circle.svg" alt="Tentaclean Logo" id="smallLogo">
 
     </main>
-    <div id="signupPage">
-   <p id="createAccount">Login</p>
-    <form id="signupForm" action="{{url_for('login')}}" method="POST"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
+    <div id="loginPage">
+   <p id="loginText">Login</p>
+    <form id="loginForm" action="{{url_for('login')}}" method="POST"><!--FORM ACTION AND METHOD ADDED FOR FLASK-->
       <label for="email">Email:</label>
       <!--NAME in this input is needed for the Flask singup and login logic-->
       <input
@@ -57,9 +57,7 @@
     </form>
     <a id="signupButtonLoginPage" href="{{ url_for('signup')}}">Create an account</a>
     </div>
- <div class="footer">
-    <p class="footer"> &#169 2024 Tentaclean. All rights reserved.</p>
- </div>
+ 
     <script src="../static/js/script.js"></script>
   </body>
 </html>

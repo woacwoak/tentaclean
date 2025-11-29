@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+#tentacleanBody {
+    overflow: hidden;
+}
+
 /* Page load animation class */
 .page-load {
     animation: fadeIn 0.5s ease-in;
@@ -27,7 +31,7 @@ body {
 h1 {
     font-size: 40px;
     position:static;
-    width: 100%;
+    width: 100vw;
     margin-top: 20px;
     text-align: left;
     margin-left: 20px;
@@ -58,8 +62,8 @@ h1 {
 
 #logo {
     position: absolute;
-    top: 20vh;
-    left: 25vh;
+    
+    left: 12vw;
     width: 500px;
     height: 500px;
     animation: floatAnimation 3s ease-in-out infinite;
@@ -81,6 +85,7 @@ h1 {
     position: absolute;
     width:100%;
     height: 100px;
+    margin-top: 10px;
 }
 
 #smallLogo img {
@@ -157,6 +162,25 @@ h1 {
     color: black;
 }
 
+#octyLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 100px;
+}
+
+#logoAndWelcome {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
 
 #welcomePage {
     display: flex;
@@ -164,7 +188,6 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    padding-left: 75vh;   
     animation: slideInFromRight 0.8s ease-out;
 }
 
@@ -180,6 +203,16 @@ h1 {
 }
 
 #signupPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;;  
+    margin-top: 0px;
+    animation: zoomIn 0.5s ease-out;
+}
+
+#loginPage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,7 +242,22 @@ h1 {
     margin-top: 50px;
 }
 
+#loginForm {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-top: 50px;
+}
+
 #signupForm label {
+    text-align: left;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+#loginForm label {
     text-align: left;
     width: 500px;
     margin-bottom: 5px;
@@ -225,7 +273,24 @@ h1 {
     transition: all 0.3s ease;
 }
 
+#loginForm input {
+    margin-bottom: 25px;
+    padding: 8px;
+    font-size: 16px;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
+}
+
 #signupForm input:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+#loginForm input:focus {
     outline: none;
     border-color: #5BA4D8;
     box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
@@ -249,7 +314,30 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#loginForm button {
+    width: 500px;
+    margin-top: 20px;
+    color: white;
+    background-color: #5ba4d8;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 #signupForm button:hover {
+    background-color: #3991D0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#loginForm button:hover {
     background-color: #3991D0;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -260,11 +348,22 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+#loginForm button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
 #submit:hover {
     background-color: #3991D0;
 }
 
 #createAccount {
+    position: absolute;
+    top: 130px;
+    font-size: 42px;
+}
+
+#loginText {
     position: absolute;
     top: 130px;
     font-size: 42px;
@@ -312,6 +411,7 @@ nav a{
     padding: 10px 15px;
     position: relative;
     z-index: 1000;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -331,7 +431,7 @@ nav button{
 
 #accounticon{
     position: static;
-    width: 50px;
+    width: 30px;
     filter: invert(100%);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -349,6 +449,7 @@ nav button{
 .intro{
     text-align: center;
     margin-top: 70px;
+    margin-left: 0;
 }
 
 #createbtn, #joinbtn{
@@ -366,6 +467,23 @@ nav button{
    
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#joinbtn{
+    margin: 15px;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 400px;
+    border-radius: 20px;
+    color: white;
+    border: 0px;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
 }
 
 #createbtn:hover, #joinbtn:hover {
@@ -425,18 +543,28 @@ nav button{
     margin: 20px;
     margin-top: 100px;
     font-weight: lighter;
+    text-align: center;
+    justify-content: center;
+    
 }
 
 #yourhousescontainer{
-    margin: 20px;
-    margin-top: 40px;
-
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    
 }
 
 #House1 {
     border: 2px solid black;
     margin: 10px;
-   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
     padding: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -503,6 +631,59 @@ html{
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
 
+<<<<<<< HEAD
+=======
+
+@media screen and (width>=2560px){
+    #signupForm input {
+        width: 1250px;
+        margin-bottom: 30px;
+        font-size: 64px;
+        border-radius: 25px;
+    }
+
+    #signupForm label {
+        width: 1250px;
+        font-size: 64px;
+    }
+
+    #signupForm button {
+        width: 1270px;
+        font-size: 86px;
+        border-radius: 25px;
+    }    
+
+    #signupForm {
+        margin-top: 200px;
+    }
+
+    #createAccount {
+        font-size: 128px;
+        top: 200px;
+    }
+
+    #smallLogo img {
+        width: 200px;
+        margin-top: 125px;
+    }
+    .nav{
+        display: flex;
+        gap: 0px;
+        padding-left: 50px;
+        font-size: 90%;
+        width: 2560px;
+        
+    }
+   
+    .navmobile{
+        display: none;
+    
+    }
+}
+
+
+
+>>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 @media screen and (width<=1441px){
     #signupForm input {
         width: 550px;
@@ -533,6 +714,19 @@ html{
         width: 100px;
         margin-top: 20px;
     }
+    .nav{
+        display: flex;
+        gap: 80px;
+        padding-left: 50px;
+        font-size: 90%;
+        width: 1300px;
+        
+    }
+   
+    .navmobile{
+        display: none;
+    
+    }
 }
 
 @media screen and (width<=1025px){
@@ -562,6 +756,70 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
+    }
+    .nav{
+        display: flex;
+        gap: 80px;
+        padding-left: 50px;
+        font-size: 70%;
+        width: 830px;
+        
+    }
+   
+    .navmobile{
+        display: none;
+    
+    }
+    .yourhouses{
+        
+        text-align: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 70px;
+        font-size: 150%;
+        
+    }
+    #yourhousescontainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin: 0px;
+        margin-top: 30px;
+        padding: 0 20px;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        justify-items: center;
+            
+    }
+    #House1{
+        width: 400px;
+        height: 50px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+
+
+    }
+    .nav a{
+        width: 200px;
+    }
+    .house{
+        font-size: 120%;
+        margin-bottom: 10px;
+        font-weight: lighter;
+    }
+    #joinbtn{
+        margin-top: 10px;
+        height: 50px;
+        width: 150px;
+        font-size: 120%;
+
+    }
+
+    #logo {
+        left: 5vw;
     }
 }
 
@@ -589,7 +847,104 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
+
+    .nav {
+        display: flex;
+        gap: 50px;
+        padding-left: 0px;
+        font-size: 80%;
+        width: 630px;
+        
+    }
+   
+    .navmobile{
+        display: none;
+    
+    }
+    .yourhouses{
+        
+        text-align: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 70px;
+        font-size: 150%;
+        
+    }
+    #yourhousescontainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin: 0px;
+        margin-top: 30px;
+        padding: 0 20px;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        justify-items: center;
+            
+    }
+    #House1{
+        width: 300px;
+        height: 50px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+
+
+    }
+    .nav a{
+        width: 200px;
+    }
+    .house{
+        font-size: 120%;
+        margin-bottom: 10px;
+        font-weight: lighter;
+    }
+    #joinbtn{
+        margin-top: 10px;
+        height: 50px;
+        width: 150px;
+        font-size: 120%;
+
+    }
+
+    
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 300px;
+    height: 300px;
+    margin-left: 25vw;
+   }
+
+   #logo {
+    width: 300px;
+    height: 300px;
+    left: auto;
+   }
+
+   #welcomePage {
+    margin-top: 12vh;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 280px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
+
 }
 
 @media screen and (width<=426px){
@@ -598,15 +953,31 @@ html{
         margin-bottom: 20px;
     }
 
+    #loginForm input {
+        width: 350px;
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
     #signupForm label {
         width: 350px;
 
     }
 
+    #loginForm label {
+        width: 350px;
+        font-size: 22px;
+    }
+
     #signupForm button {
         width: 370px;
         
-    }    
+    }
+    
+    #loginForm button {
+        width: 370px;
+        
+    }
 
     #createAccount {
         font-size: 28px;
@@ -616,7 +987,104 @@ html{
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
+
+        .nav {
+        display: none;
+    }
+    
+    .navmobile{
+        display: flex;
+        gap: 80px;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        position: fixed;
+        bottom: 0;
+        padding-left: 30px;
+        width: 375px;
+    }
+    .yourhouses{
+        
+        text-align: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 70px;
+        font-size: 150%;
+        
+    }
+    #yourhousescontainer{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        align-items: center;
+        
+    }
+    #House1{
+        width: 250px;
+        height: 50px;
+        padding-top: 30px;
+        padding-bottom: 80px;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .house{
+        font-size: 120%;
+        margin-bottom: 10px;
+        font-weight: lighter;
+        padding-top: 50px;
+    }
+    #joinbtn{
+        margin-top: 10px;
+        height: 50px;
+        width: 100px;
+        font-size: 120%;
+        
+    }
+
+
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 250px;
+    height: 250px;
+    margin-left: 0;
+   }
+
+   #logo {
+    width: 250px;
+    height: 250px;
+    margin-top: 180px;
+   }
+
+   #logoAndWelcome {
+    flex-direction: column;
+    gap: 0;
+   }
+
+   #welcomePage {
+    margin-bottom: 50px;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 320px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
+
 }
 
 @media screen and (width<=376px){
@@ -625,25 +1093,139 @@ html{
         margin-bottom: 20px;
     }
 
+    #loginForm input {
+        width: 300px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
     #signupForm label {
         width: 300px;
 
     }
 
+    #loginForm label {
+        width: 300px;
+        font-size: 20px;
+    }
+
     #signupForm button {
         width: 320px;
         
-    }    
+    }
+    
+    #loginForm button {
+        width: 320px;
+        
+    }
 
     #createAccount {
         font-size: 28px;
         top: 90px;
     }
 
+    #loginText {
+        font-size: 28px;
+        top: 120px;
+    }
+
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
+    .nav{
+        display: none;
+    }
+    .navmobile{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        position: fixed;
+        bottom: 0;
+        padding-left: 0;
+        width: 375px;
+    }
+    .yourhouses{
+        
+        text-align: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 70px;
+        font-size: 150%;
+        
+    }
+    #yourhousescontainer{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        align-items: center;
+        
+    }
+    #House1{
+        width: 200px;
+        height: 50px;
+        padding-top: 30px;
+        padding-bottom: 80px;
+
+
+    }
+    .house{
+        font-size: 120%;
+        margin-bottom: 10px;
+        font-weight: lighter;
+    }
+    #joinbtn{
+        margin-top: 10px;
+        height: 50px;
+        width: 80px;
+        font-size: 120%;
+
+    }
+
+
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 200px;
+    height: 200px;
+   }
+
+   #logo {
+    width: 200px;
+    height: 200px;
+    left: auto;
+    margin-top: 200px;
+   }
+
+   #logoAndWelcome {
+    flex-direction: column;
+    gap: 0;
+   }
+
+   #welcomePage {
+    margin-bottom: 50px;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 280px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
+
 }
    
 @media screen and (width<=321px){
@@ -664,13 +1246,81 @@ html{
 
     #createAccount {
         font-size: 28px;
-        top: 90px;
+        top: 100px;
+    }
+
+    #loginText {
+        font-size: 28px;
+        top: 120px;
     }
 
     #smallLogo img {
         width: 75px;
         margin-bottom: 10px;
+        margin-top: 0;
     }
+<<<<<<< HEAD
+=======
+
+ 
+    #loginForm input {
+        width: 250px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    #loginForm label {
+        width: 250px;
+        font-size: 20px;
+    }
+
+    #loginForm button {
+        width: 270px;
+    }
+
+   .navmobile {
+    width: 100vw;
+   }
+
+   #websiteName {
+    text-align: center;
+    margin-left: 0;
+   }
+
+   #octyLogo {
+    width: 200px;
+    height: 200px;
+   }
+
+   #logo {
+    width: 200px;
+    height: 200px;
+    left: auto;
+    margin-top: 175px;
+   }
+
+   #logoAndWelcome {
+    flex-direction: column;
+    gap: 0;
+   }
+
+   #welcomePage {
+    margin-bottom: 50px;
+   }
+
+   #slogan {
+    font-size: 28px;
+    margin-bottom: 20px;
+   }
+
+   #loginButton {
+    width: 250px;
+   }
+
+   #signupButton {
+    margin-bottom: 50px;
+   }
+>>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 }
 
 
@@ -776,10 +1426,8 @@ transition: all 0.3s ease;
 }
 
 #Taskpage{
-    left: 650px;
-    position: absolute;
-    text-align: center;
-    margin-top: 50px;
+    
+    
     font-size: 30px;
     font: "Inter";
     font-weight: normal;
@@ -904,15 +1552,82 @@ transition: all 0.3s ease;
     .nav{
         display: none;
     }
+<<<<<<< HEAD
+=======
+    .navmobile{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+       
+    }
+>>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
     .intro {
         font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        margin-left: 0px;
     }
     #createbtn{
         font-size: 20px;
     }
     #joinbtn{
         font-size: 20px;
+        width: 170px;
     }
+<<<<<<< HEAD
+=======
+    #signupForm button {
+
+        width: 150px;
+    }    
+
+    #signupForm input {
+
+        width: 270px;
+        height: 20px;
+    }
+
+    
+    .yourhouses{
+        
+        text-align: center;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 70px;
+        font-size: 150%;
+        
+    }
+    #yourhousescontainer{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        align-items: center;
+        
+    }
+    #House1{
+        width: 200px;
+        height: 50px;
+        padding-top: 30px;
+        padding-bottom: 80px;
+
+
+    }
+    .house{
+        font-size: 120%;
+        margin-bottom: 10px;
+        font-weight: lighter;
+    }
+    #joinbtn{
+        margin-top: 10px;
+       
+        width: 100px;
+    }
+>>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 }
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
