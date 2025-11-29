@@ -279,7 +279,7 @@ h1 {
     font-weight: bold;
 }
 
-.nav {
+nav {
     height:100px;
     background-color: #5BA4D8;
     display: flex;
@@ -291,20 +291,6 @@ h1 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 100;
-}
-.navmobile {
-    height:100px;
-    background-color: #5BA4D8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 150px;
-
-
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 100;
-    display: none;
 }
 
 @keyframes slideDown {
@@ -456,6 +442,12 @@ nav button{
     padding-bottom: 50px;
     text-align: center;
     width: 500px;
+    display: flex; /* Turn it into a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center;
+
+
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
     animation-fill-mode: both;
@@ -511,92 +503,50 @@ html{
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
 
-
-@media screen and (width>=2560px){
-    #signupForm input {
-        width: 1250px;
-        margin-bottom: 30px;
-        font-size: 64px;
-        border-radius: 25px;
-    }
-
-    #signupForm label {
-        width: 1250px;
-        font-size: 64px;
-    }
-
-    #signupForm button {
-        width: 1270px;
-        font-size: 86px;
-        border-radius: 25px;
-    }    
-
-    #signupForm {
-        margin-top: 200px;
-    }
-
-    #createAccount {
-        font-size: 128px;
-        top: 200px;
-    }
-
-    #smallLogo img {
-        width: 200px;
-        margin-top: 125px;
-    }
-}
-
-
-
 @media screen and (width<=1441px){
     #signupForm input {
         width: 550px;
-        margin-bottom: 20px;
-        font-size: 20px;
+        margin-bottom: 30px;
+        font-size: 26px;
     }
 
     #signupForm label {
         width: 550px;
-        font-size: 20px;
+        font-size: 26px;
     }
 
     #signupForm button {
         width: 570px;
         font-size: 26px;
-        
     }    
 
     #signupForm {
-        margin-top: 170px;
+        margin-top: 100px;
     }
 
     #createAccount {
         font-size: 40px;
-        top: 100px;
+        top: 125px;
     }
 
     #smallLogo img {
-        width: 75px;
+        width: 100px;
         margin-top: 20px;
     }
 }
 
-
-
 @media screen and (width<=1025px){
     #signupForm input {
-        width: 550px;
+        width: 350px;
         margin-bottom: 20px;
-        font-size: 22px;
     }
 
     #signupForm label {
-        width: 550px;
-         font-size: 22px;
+        width: 350px;
     }
 
     #signupForm button {
-        width: 570px;
+        width: 370px;
         
     }    
 
@@ -617,18 +567,17 @@ html{
 
 @media screen and (width<=769px){
     #signupForm input {
-        width: 450px;
+        width: 350px;
         margin-bottom: 20px;
-         font-size: 22px;
     }
 
     #signupForm label {
-        width: 450px;
-        font-size: 22px;
+        width: 350px;
+
     }
 
     #signupForm button {
-        width: 470px;
+        width: 370px;
         
     }    
 
@@ -647,12 +596,11 @@ html{
     #signupForm input {
         width: 350px;
         margin-bottom: 20px;
-        font-size: 22px;
     }
 
     #signupForm label {
         width: 350px;
-        font-size: 22px;
+
     }
 
     #signupForm button {
@@ -675,12 +623,11 @@ html{
     #signupForm input {
         width: 300px;
         margin-bottom: 20px;
-        font-size: 20px;
     }
 
     #signupForm label {
         width: 300px;
-        font-size: 20px;
+
     }
 
     #signupForm button {
@@ -703,12 +650,11 @@ html{
     #signupForm input {
         width: 250px;
         margin-bottom: 20px;
-        font-size: 20px;
     }
 
     #signupForm label {
         width: 250px;
-        font-size: 20px;
+
     }
 
     #signupForm button {
@@ -725,9 +671,8 @@ html{
         width: 75px;
         margin-bottom: 10px;
     }
-
-   
 }
+
 
 
 #createaHouse{
@@ -758,6 +703,8 @@ html{
     align-self: center;
     align-items: center;
     width: 760px;
+    padding: 10px;
+    padding-left: 20px;
 }
 
 #createhouseform label {
@@ -791,8 +738,9 @@ transition: all 0.3s ease;
     line-height: 16px;
     width: 750px;
     font-size: large;
-font-family: "Inter", sans-serif;
-transition: all 0.3s ease;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
 }
 
 #descriptionInput:focus {
@@ -952,18 +900,9 @@ transition: all 0.3s ease;
     font-weight: normal;
 }
 
-
 @media screen and (width<=320px){
     .nav{
         display: none;
-    }
-    .navmobile{
-        display: flex;
-        gap: 40px;
-        align-items: center;
-        justify-content: center;
-       height: 50px;
-
     }
     .intro {
         font-size: 20px;
@@ -973,38 +912,6 @@ transition: all 0.3s ease;
     }
     #joinbtn{
         font-size: 20px;
-    }
-    #signupForm button {
-
-        width: 150px;
-    }    
-
-    #signupForm input {
-
-        width: 270px;
-        height: 20px;
-    }
-
-    #signupPage {
-
-        height: 50vh;
-    }
-    .yourhouses{
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-        padding: 0px;
-        margin-top: 70px;
-        font-size: 150%;
-        
-    }
-    #House1{
-        width: 250px;
-        height: 100px;
-
-    }
-    #joinbtn{
-        margin-top: 20px;
     }
 }
 /* LOGIN ans SIGNUP ERROR HANDLING*/
