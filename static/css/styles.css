@@ -955,6 +955,20 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
+       .task-btn{
+    width: 300px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
 
 }
 
@@ -1095,6 +1109,20 @@ html{
 
    #signupButton {
     margin-bottom: 50px;
+   }
+    .task-btn{
+    width: 300px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
    }
 
 }
@@ -1238,6 +1266,21 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
+      .task-btn{
+    width: 260px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
+
 
 }
    
@@ -1291,7 +1334,7 @@ html{
     }
 
    .navmobile {
-    width: 100vw;
+    width: 100%;
    }
 
    #websiteName {
@@ -1332,6 +1375,21 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
+
+   .task-btn{
+    width: 260px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   
+
+
 }
 
 
