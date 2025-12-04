@@ -30,7 +30,7 @@ body {
 
 h1 {
     font-size: 40px;
-    position:static;
+    position:absolute;
     width: 100vw;
     margin-top: 20px;
     text-align: left;
@@ -371,11 +371,23 @@ h1 {
 
 
 .Tentaclean{
-    font-size: 170%;    
-    color: white;
+       width: 70px;
+       height: 70px;    
+    color: transparent;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+
+    /* 1. Define the image and stop it from tiling */
+    background-image: url(/static/img/icons/App_icon_circle.svg);
+    background-repeat: no-repeat;
+
+    /* 2. Position it (Center or keep your 90% horizontal offset) */
+    background-position: center; 
+
+    /* 3. CONTROL THE SIZE HERE */
+    /* 'contain' scales the image to fit inside the width/height fully */
+    background-size: contain;
 }
 
 nav {
@@ -446,10 +458,11 @@ nav button{
     padding: 0px;
 }
 
-.intro{
+.intro {
     text-align: center;
     margin-top: 70px;
     margin-left: 0;
+    margin-bottom: 100px;
 }
 
 #createbtn, #joinbtn{
@@ -483,6 +496,7 @@ nav button{
     align-items: center;
     justify-content: center;
     display: flex;
+    text-decoration: none;
 
 }
 
@@ -545,6 +559,7 @@ nav button{
     font-weight: lighter;
     text-align: center;
     justify-content: center;
+    margin-bottom: 70px !important;
     
 }
 
@@ -555,8 +570,13 @@ nav button{
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
+    margin-top: 0px;
+    position: static;
     
 }
+   h1{
+    position: static;
+   }
 
 #House1 {
     border: 2px solid black;
@@ -603,6 +623,11 @@ html{
     
 }
 
+.navmobile {
+    display: none;
+}
+
+
 #logOut { 
     position: relative;
     margin: 15px;
@@ -631,8 +656,6 @@ html{
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
 
-<<<<<<< HEAD
-=======
 
 @media screen and (width>=2560px){
     #signupForm input {
@@ -683,7 +706,6 @@ html{
 
 
 
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 @media screen and (width<=1441px){
     #signupForm input {
         width: 550px;
@@ -727,6 +749,41 @@ html{
         display: none;
     
     }
+       #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+         #joinbtn, #createbtn{
+    width: 300px;
+    margin-top: 50px !important;
+    text-decoration: none;
+    margin-bottom: 100px;
+   }
+
+   #joinbtn{
+    width: 320px;
+    height: 50px;
+   }
+   #createbtn{
+    height: 50px;
+    font-size: 170%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
+    margin-bottom: 50px;
+   }
 }
 
 @media screen and (width<=1025px){
@@ -821,6 +878,41 @@ html{
     #logo {
         left: 5vw;
     }
+       #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+         #joinbtn, #createbtn{
+    width: 250px;
+    margin-top: 50px !important;
+    text-decoration: none;
+    margin-bottom: 100px;
+   }
+
+   #joinbtn{
+    width: 270px;
+    height: 30px;
+   }
+   #createbtn{
+    height: 30px;
+    font-size: 120%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
+    margin-bottom: 50px;
+   }
 }
 
 @media screen and (width<=769px){
@@ -907,6 +999,7 @@ html{
         height: 50px;
         width: 150px;
         font-size: 120%;
+        text-decoration: none;
 
     }
 
@@ -942,6 +1035,55 @@ html{
    }
 
    #signupButton {
+    margin-bottom: 50px;
+   }
+       .task-btn{
+    width: 300px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
+      #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+      #joinbtn, #createbtn{
+    width: 250px;
+    margin-top: 50px !important;
+    text-decoration: none;
+    margin-bottom: 100px;
+   }
+
+   #joinbtn{
+    width: 270px;
+    height: 30px;
+   }
+   #createbtn{
+    
+    font-size: 120%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
     margin-bottom: 50px;
    }
 
@@ -1037,13 +1179,17 @@ html{
         font-weight: lighter;
         padding-top: 50px;
     }
-    #joinbtn{
+    #joinbtn {
         margin-top: 10px;
-        height: 50px;
+        height: 30px;
         width: 100px;
         font-size: 120%;
         
     }
+    #createbtn{
+        height: 30px !important;
+    }
+
 
 
    #websiteName {
@@ -1083,6 +1229,62 @@ html{
 
    #signupButton {
     margin-bottom: 50px;
+   }
+    .task-btn{
+    width: 300px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
+      .intro{
+    position: static;
+    margin-top: 50px;
+    margin-bottom: 0px;
+   }
+
+   .task-list{
+    margin-top: 0px !important;
+   }
+      #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+     
+   #joinbtn, #createbtn{
+    width: 400px;
+    margin-top: 50px !important;
+    text-decoration: none;
+   }
+
+   #joinbtn{
+    width: 420px;
+   }
+   #createbtn{
+    height: 50px;
+    font-size: 120%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
    }
 
 }
@@ -1180,9 +1382,10 @@ html{
     }
     #joinbtn{
         margin-top: 10px;
-        height: 50px;
+        height: 30px;
         width: 80px;
         font-size: 120%;
+        text-decoration: none;
 
     }
 
@@ -1225,6 +1428,61 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
+      .task-btn{
+    width: 260px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
+      .intro{
+    position: static;
+    margin-top: 50px;
+    margin-bottom: 0px;
+   }
+
+   .task-list{
+    margin-top: 0px !important;
+   }
+      #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+      .yourhouses{
+    margin-bottom: 70px !important;
+   }
+  
+   #joinbtn, #createbtn{
+    width: 400px;
+    margin-top: 50px !important;
+    text-decoration: none;
+   }
+
+   #joinbtn{
+    width: 420px;
+   }
+   #createbtn{
+    height: 50px;
+    font-size: 120%;
+   }
+   .intro{
+    margin-top: 130px;
+   }
+
 
 }
    
@@ -1259,8 +1517,6 @@ html{
         margin-bottom: 10px;
         margin-top: 0;
     }
-<<<<<<< HEAD
-=======
 
  
     #loginForm input {
@@ -1279,7 +1535,7 @@ html{
     }
 
    .navmobile {
-    width: 100vw;
+    width: 100%;
    }
 
    #websiteName {
@@ -1320,7 +1576,32 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
+   .intro{
+    position: static;
+    margin-top: 50px;
+    margin-bottom: 0px;
+   }
+
+   .task-list{
+    margin-top: 0px !important;
+   }
+
+   #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+  
+   #joinbtn{
+    width: 400px !important;
+    margin-top: 50px !important;
+   }
 }
 
 
@@ -1426,8 +1707,8 @@ transition: all 0.3s ease;
 }
 
 #Taskpage{
-    
-    
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 30px;
     font: "Inter";
     font-weight: normal;
@@ -1552,8 +1833,6 @@ transition: all 0.3s ease;
     .nav{
         display: none;
     }
-<<<<<<< HEAD
-=======
     .navmobile{
         display: flex;
         gap: 40px;
@@ -1564,7 +1843,6 @@ transition: all 0.3s ease;
         bottom: 0;
        
     }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
     .intro {
         font-size: 20px;
         margin-left: 0px;
@@ -1578,8 +1856,6 @@ transition: all 0.3s ease;
         font-size: 20px;
         width: 170px;
     }
-<<<<<<< HEAD
-=======
     #signupForm button {
 
         width: 150px;
@@ -1627,7 +1903,6 @@ transition: all 0.3s ease;
        
         width: 100px;
     }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 }
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
@@ -1798,3 +2073,4 @@ input:focus, textarea:focus {
         box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
     }
 }
+
