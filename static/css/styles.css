@@ -640,6 +640,85 @@ nav button{
     font-size: 200%
 }
 
+.task-btn {
+        width: 423px;
+        height: 65px;
+        padding: 10px 16px;
+        border: 2px solid #cfcfcf;
+        background-color: white;
+        border-radius: 18px;
+        font-size: 16px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        transition: all 0.3s 
+cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .create-btn {
+        background-color: #b8b8b8;
+        border: none;
+        color: #4b4b4b;
+        transition: all 0.3s 
+ease;
+    }
+
+    .plus {
+        font-size: 20px;
+        margin-right: 4px;
+    }
+
+.task-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 0;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        animation: fadeInUp 0.6s 
+ease-out;
+    }
+
+    #Taskpage {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 30px;
+        font: "Inter";
+        font-weight: normal;
+    }
+
+        .task-btn:hover {
+        background-color: #f5f5f5;
+        transform: translateX(5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-color: #5BA4D8;
+    }
+
+    .circle {
+        width: 14px;
+        height: 14px;
+        border: 2px solid #999;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 0.3s 
+ease;
+        cursor: pointer;
+    }   
+
+    .task-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        cursor: pointer;
+        transition: all 0.3s 
+ease;
+    }
+
 #housescontainer{
     margin: 50px;
     display: flex;
@@ -650,6 +729,7 @@ nav button{
     flex-wrap: wrap;
     
 }
+
 
 .yourhouses{
     margin: 20px;
@@ -2009,9 +2089,12 @@ transition: all 0.3s ease;
     align-self: center;
     margin-left: 0;
     margin-bottom: 0;
+
+   }
+
    .intro{
     position: static;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 0px;
    }
 
@@ -2148,7 +2231,8 @@ transition: all 0.3s ease;
     flex-direction: column;
     gap: 15px;
     margin: auto;
-    margin-top: 100px;
+    position: relative;
+    margin-bottom: 100px;
     width: 300px;
     justify-content: center;
     align-items: center;
