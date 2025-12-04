@@ -30,7 +30,7 @@ body {
 
 h1 {
     font-size: 40px;
-    position:static;
+    position:absolute;
     width: 100vw;
     margin-top: 20px;
     text-align: left;
@@ -371,11 +371,23 @@ h1 {
 
 
 .Tentaclean{
-    font-size: 170%;    
-    color: white;
+       width: 70px;
+       height: 70px;    
+    color: transparent;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+
+    /* 1. Define the image and stop it from tiling */
+    background-image: url(/static/img/icons/App_icon_circle.svg);
+    background-repeat: no-repeat;
+
+    /* 2. Position it (Center or keep your 90% horizontal offset) */
+    background-position: center; 
+
+    /* 3. CONTROL THE SIZE HERE */
+    /* 'contain' scales the image to fit inside the width/height fully */
+    background-size: contain;
 }
 
 nav {
