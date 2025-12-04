@@ -1374,7 +1374,7 @@ transition: all 0.3s ease;
     #joinbtn {
         margin-top: 10px;
         height: 30px;
-        width: 100px;
+
         font-size: 120%;
         
     }
@@ -1669,7 +1669,6 @@ transition: all 0.3s ease;
     #joinbtn{
         margin-top: 10px;
         height: 30px;
-        width: 80px;
         font-size: 120%;
         text-decoration: none;
 

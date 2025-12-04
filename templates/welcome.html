@@ -43,25 +43,15 @@
 
     <div id="houseButtons">
   <a href="{{url_for('createhouse')}}" id="createbtn" >Create House</a>
-  <a href="{{url_for('dashboard')}}" id="joinbtn" >Join House</a>
+  <a href="{{url_for('houselist')}}" id="joinbtn" >Join House</a>
   </div>
     <footer>
     <nav class="navmobile">
         
-        <a href="{{url_for('home')}}">
-    <img src="../static/img/icons/home_nav_icon.svg" alt="home" class="nav-icon">
-        </a>
-
-        <a href="{{url_for('houselist')}}">
-    <img src="../static/img/icons/list_nav_icon.svg" alt="houseList" class="nav-icon">
-        </a>
-
-        <a href="{{url_for('createhouse')}}">
-    <img src="../static/img/icons/add_nav_icon.svg" alt="createhouse" class="nav-icon">
-        </a>
-        <a href="{{url_for('logout')}}">
-          <img src="../static/img/icons/account_circle.svg" href="{{url_for('logout')}}" alt="account" id="accounticon">
-          </a>
+        <a href="{{url_for('home')}}"><img src="../static/img/icons/home_nav_icon.svg" alt="home" id="icon"></a>
+        <a href="{{url_for('houselist')}}"><img src="../static/img/icons/list_nav_icon.svg" alt ="houseList" id="icon"></a>
+        <a href="{{url_for('createhouse')}}"><img src="../static/img/icons/add_nav_icon.svg" alt="createhouse" id="icon"></a>
+        <a href="{{url_for('logout')}}"><img src="../static/img/icons/account_circle.svg" alt="account" id="accounticon"></a>
     </nav>
   </footer>
 </body>
