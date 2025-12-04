@@ -557,8 +557,6 @@ nav button{
     border: 0px;
     font-size: 30px;
     text-align: center;
-  
-   
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -573,6 +571,25 @@ nav button{
     color: white;
     border: 0px;
     font-size: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+
+}
+#joinbtn2{
+    margin: 15px;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    background-color: #5BA4D8;
+    border: 0px;
+    font-size: 20px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -1087,7 +1104,7 @@ html{
     }
     .house{
         font-size: 120%;
-        margin-bottom: 10px;
+        
         font-weight: lighter;
     }
     #joinbtn{
@@ -1096,6 +1113,7 @@ html{
         width: 150px;
         font-size: 120%;
         text-decoration: none;
+        
 
     }
 
@@ -1277,6 +1295,16 @@ transition: all 0.3s ease;
    .intro{
     margin-top: 130px;
     margin-bottom: 50px;
+   }
+      #joinbtn2{
+      width: 200px !important;
+    margin-top: 10px !important;
+    margin-bottom: 100px !important;
+   }
+   .house{
+    margin-top: 50px;
+    margin-bottom: 20px !important;
+    
    }
 
 }
@@ -1572,6 +1600,15 @@ transition: all 0.3s ease;
    .intro{
     margin-top: 130px;
    }
+      #joinbtn2{
+      width: 200px !important;
+    margin-top: 10px !important;
+   }
+   .house{
+    margin-top: 100px !important;
+    margin-bottom: 20px !important;
+    
+   }
 
 }
 
@@ -1755,6 +1792,7 @@ transition: all 0.3s ease;
       #yourhousescontainer {
     margin-top: 0px;
     position: static;
+    margin-bottom: 50px;
    }
    h1{
     position: static;
@@ -1782,6 +1820,15 @@ transition: all 0.3s ease;
    }
    .intro{
     margin-top: 130px;
+   }
+      #joinbtn2{
+      width: 200px !important;
+    margin-top: 10px !important;
+   }
+   .house{
+    margin-top: 50px;
+    margin-bottom: 20px !important;
+    
    }
 
 
@@ -1974,6 +2021,7 @@ transition: all 0.3s ease;
 
    #yourhousescontainer {
     margin-top: 0px;
+    margin-bottom: 100px;
     position: static;
    }
    h1{
@@ -1987,6 +2035,15 @@ transition: all 0.3s ease;
    #joinbtn{
     width: 400px !important;
     margin-top: 50px !important;
+   }
+   #joinbtn2{
+      width: 200px !important;
+    margin-top: 10px !important;
+   }
+   .house{
+    margin-top: 50px;
+    margin-bottom: 20px !important;
+    
    }
 }
 

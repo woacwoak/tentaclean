@@ -25,7 +25,7 @@
         {% for house in houses %}
         <div id="House1">
             <h2 class="house">{{house.name}}</h2>
-            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn">Join</button>
+            <button onclick="window.location.href='{{ url_for('taskpage', house_id=house.id) }}'" id="joinbtn2">Join</button>
         </div>
         {% endfor %}
     {% else %}
