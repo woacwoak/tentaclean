@@ -539,11 +539,11 @@ nav button{
     padding: 0px;
 }
 
-.intro{
+.intro {
     text-align: center;
     margin-top: 70px;
     margin-left: 0;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 #createbtn, #joinbtn{
@@ -577,6 +577,7 @@ nav button{
     align-items: center;
     justify-content: center;
     display: flex;
+    text-decoration: none;
 
 }
 
@@ -639,6 +640,7 @@ nav button{
     font-weight: lighter;
     text-align: center;
     justify-content: center;
+    margin-bottom: 70px !important;
     
 }
 
@@ -649,8 +651,13 @@ nav button{
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
+    margin-top: 0px;
+    position: static;
     
 }
+   h1{
+    position: static;
+   }
 
 #House1 {
     border: 2px solid black;
@@ -823,6 +830,41 @@ html{
         display: none;
     
     }
+       #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+         #joinbtn, #createbtn{
+    width: 300px;
+    margin-top: 50px !important;
+    text-decoration: none;
+    margin-bottom: 100px;
+   }
+
+   #joinbtn{
+    width: 320px;
+    height: 50px;
+   }
+   #createbtn{
+    height: 50px;
+    font-size: 170%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
+    margin-bottom: 50px;
+   }
 }
 
 @media screen and (width<=1025px){
@@ -932,6 +974,41 @@ html{
     border: 2px solid #B8B8B8;
     transition: all 0.3s ease;
 }
+       #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+         #joinbtn, #createbtn{
+    width: 250px;
+    margin-top: 50px !important;
+    text-decoration: none;
+    margin-bottom: 100px;
+   }
+
+   #joinbtn{
+    width: 270px;
+    height: 30px;
+   }
+   #createbtn{
+    height: 30px;
+    font-size: 120%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
+    margin-bottom: 50px;
+   }
 }
 
 @media screen and (width<=769px){
@@ -1018,6 +1095,7 @@ html{
         height: 50px;
         width: 150px;
         font-size: 120%;
+        text-decoration: none;
 
     }
 
@@ -1165,6 +1243,41 @@ transition: all 0.3s ease;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
+      #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+      #joinbtn, #createbtn{
+    width: 250px;
+    margin-top: 50px !important;
+    text-decoration: none;
+    margin-bottom: 100px;
+   }
+
+   #joinbtn{
+    width: 270px;
+    height: 30px;
+   }
+   #createbtn{
+    
+    font-size: 120%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
+    margin-bottom: 50px;
+   }
 
 }
 
@@ -1258,13 +1371,17 @@ transition: all 0.3s ease;
         font-weight: lighter;
         padding-top: 50px;
     }
-    #joinbtn{
+    #joinbtn {
         margin-top: 10px;
-        height: 50px;
+        height: 30px;
         width: 100px;
         font-size: 120%;
         
     }
+    #createbtn{
+        height: 30px !important;
+    }
+
 
 
    #websiteName {
@@ -1413,6 +1530,48 @@ transition: all 0.3s ease;
     transform: translateY(-1px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
+      .intro{
+    position: static;
+    margin-top: 50px;
+    margin-bottom: 0px;
+   }
+
+   .task-list{
+    margin-top: 0px !important;
+   }
+      #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+     
+   #joinbtn, #createbtn{
+    width: 400px;
+    margin-top: 50px !important;
+    text-decoration: none;
+   }
+
+   #joinbtn{
+    width: 420px;
+   }
+   #createbtn{
+    height: 50px;
+    font-size: 120%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+   }
+   .intro{
+    margin-top: 130px;
+   }
 
 }
 
@@ -1509,9 +1668,10 @@ transition: all 0.3s ease;
     }
     #joinbtn{
         margin-top: 10px;
-        height: 50px;
+        height: 30px;
         width: 80px;
         font-size: 120%;
+        text-decoration: none;
 
     }
 
@@ -1584,6 +1744,47 @@ transition: all 0.3s ease;
     flex-direction: column;
     justify-content: center;
     padding-top: 0px;
+      .intro{
+    position: static;
+    margin-top: 50px;
+    margin-bottom: 0px;
+   }
+
+   .task-list{
+    margin-top: 0px !important;
+   }
+      #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+      .yourhouses{
+    margin-bottom: 70px !important;
+   }
+  
+   #joinbtn, #createbtn{
+    width: 400px;
+    margin-top: 50px !important;
+    text-decoration: none;
+   }
+
+   #joinbtn{
+    width: 420px;
+   }
+   #createbtn{
+    height: 50px;
+    font-size: 120%;
+   }
+   .intro{
+    margin-top: 130px;
+   }
+
 
 }
 
@@ -1762,6 +1963,32 @@ transition: all 0.3s ease;
     align-self: center;
     margin-left: 0;
     margin-bottom: 0;
+   .intro{
+    position: static;
+    margin-top: 50px;
+    margin-bottom: 0px;
+   }
+
+   .task-list{
+    margin-top: 0px !important;
+   }
+
+   #yourhousescontainer {
+    margin-top: 0px;
+    position: static;
+   }
+   h1{
+    position: static;
+   }
+
+   .yourhouses{
+    margin-bottom: 70px !important;
+   }
+  
+   #joinbtn{
+    width: 400px !important;
+    margin-top: 50px !important;
+   }
 }
 
 
@@ -1853,8 +2080,8 @@ transition: all 0.3s ease;
 }
 
 #Taskpage{
-    
-    
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 30px;
     font: "Inter";
     font-weight: normal;
