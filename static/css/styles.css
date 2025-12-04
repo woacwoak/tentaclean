@@ -283,6 +283,87 @@ h1 {
     transition: all 0.3s ease;
 }
 
+#createaHouse {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 35px;
+    
+    position: relative;
+}
+
+#createhouseform input {
+        padding-left: 8px;
+        height: 60px;
+        width: 750px;
+        font-size: large;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: grey;
+        border-image: initial;
+        transition: 0.3s;
+    }
+
+        #createhouseform label {
+        align-self: flex-start;
+    }
+
+    #descriptionInput {
+        height: 150px ;
+        padding-top: 5px;
+        text-align: left;
+        vertical-align: top;
+        padding-left: 8px;
+        padding-top: 16px;
+        line-height: 16px;
+        width: 750px;
+        font-size: large;
+        font-family: "Inter", sans-serif;
+        border: 2px solid #B8B8B8;
+        transition: all 0.3s 
+ease;
+    }
+
+    #createHousebtn {
+        margin-top: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #5BA4D8;
+        font-size: 22px;
+        height: 50px;
+        width: 200px;
+        cursor: pointer;
+        transition: all 0.3s 
+ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+#createhouseform {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    gap: 10px;
+    font-size: 22px;
+    align-self: center;
+    align-items: center;
+    width: 760px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+#formContainer{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
 #signupForm input:focus {
     outline: none;
     border-color: #5BA4D8;
@@ -462,6 +543,7 @@ nav button{
     text-align: center;
     margin-top: 70px;
     margin-left: 0;
+    margin-bottom: 50px;
 }
 
 #createbtn, #joinbtn{
@@ -615,6 +697,11 @@ html{
     
 }
 
+.navmobile {
+    display: none;
+}
+
+
 #logOut { 
     position: relative;
     margin: 15px;
@@ -643,8 +730,6 @@ html{
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
 
-<<<<<<< HEAD
-=======
 
 @media screen and (width>=2560px){
     #signupForm input {
@@ -695,7 +780,6 @@ html{
 
 
 
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 @media screen and (width<=1441px){
     #signupForm input {
         width: 550px;
@@ -775,7 +859,7 @@ html{
         gap: 80px;
         padding-left: 50px;
         font-size: 70%;
-        width: 830px;
+        width: 850px;
         
     }
    
@@ -833,6 +917,21 @@ html{
     #logo {
         left: 5vw;
     }
+
+    #descriptionInput {
+    height: 40px;
+    padding-top: 0px;
+    text-align: left;
+    vertical-align: top;
+     padding-left: 8px;
+     padding-top: 16px;
+    line-height: 16px;
+    width: 750px;
+    font-size: large;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
+}
 }
 
 @media screen and (width<=769px){
@@ -956,6 +1055,116 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
+       .task-btn{
+    width: 300px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
+
+           #createaHouse{
+    font-size: 40px;
+    align-self: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+#formContainer{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+
+}
+
+
+
+#createhouseform label {
+    align-self: center;
+    width: 280px;
+    font-size: 18px;
+}
+
+#createhouseform input {
+border-radius: 5px;
+border: 1px solid grey;
+width: 280px;
+height: 30px;
+font-size: 18px;
+transition: all 0.3s ease;
+}
+
+#createhouseform input:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+#createhouseform {
+    width: 300px;
+    padding-left: 0;
+}
+
+#descriptionInput {
+    height: 40px;
+    padding-top: 0px;
+    text-align: left;
+    vertical-align: top;
+     padding-left: 8px;
+     padding-top: 16px;
+    line-height: 16px;
+    width: 280px;
+    font-size: large;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
+}
+
+#descriptionInput:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+
+#createHousebtn {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5BA4D8;
+    font-size: 22px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#createHousebtn:hover {
+    background-color: #3991D0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#createHousebtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
 
 }
 
@@ -1008,7 +1217,7 @@ html{
     
     .navmobile{
         display: flex;
-        gap: 80px;
+        gap: 70px;
         align-items: center;
         justify-content: center;
         height: 45px;
@@ -1096,6 +1305,114 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
+    .task-btn{
+    width: 300px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
+
+         #createaHouse{
+    font-size: 40px;
+    align-self: center;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+
+#formContainer{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+
+}
+
+
+
+#createhouseform label {
+    align-self: center;
+    width: 280px;
+    font-size: 18px;
+}
+
+#createhouseform input {
+border-radius: 5px;
+border: 1px solid grey;
+width: 280px;
+height: 30px;
+font-size: 18px;
+transition: all 0.3s ease;
+}
+
+#createhouseform input:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+#createhouseform {
+    width: 300px;
+    padding-left: 0;
+}
+
+#descriptionInput {
+    height: 40px;
+    padding-top: 0px;
+    text-align: left;
+    vertical-align: top;
+     padding-left: 8px;
+     padding-top: 16px;
+    line-height: 16px;
+    width: 280px;
+    font-size: large;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
+}
+
+#descriptionInput:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+
+#createHousebtn {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5BA4D8;
+    font-size: 22px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#createHousebtn:hover {
+    background-color: #3991D0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#createHousebtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
 
 }
 
@@ -1237,8 +1554,117 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
+      .task-btn{
+    width: 260px !important;
+   }
+
+   #Taskpage{
+    font-size: smaller;
+   }
+
+   .task-list{
+    margin-bottom: 200px !important;
+   }
+   .intro{
+    font-size: 170%
+   }
+
+      #createaHouse{
+    font-size: 40px;
+    align-self: center;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+
+#formContainer{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
 
 }
+
+
+
+#createhouseform label {
+    align-self: center;
+    width: 280px;
+    font-size: 18px;
+}
+
+#createhouseform input {
+border-radius: 5px;
+border: 1px solid grey;
+width: 280px;
+height: 30px;
+font-size: 18px;
+transition: all 0.3s ease;
+}
+
+#createhouseform input:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+#createhouseform {
+    width: 300px;
+    padding-left: 0;
+}
+
+#descriptionInput {
+    height: 40px;
+    padding-top: 0px;
+    text-align: left;
+    vertical-align: top;
+     padding-left: 8px;
+     padding-top: 16px;
+    line-height: 16px;
+    width: 280px;
+    font-size: large;
+    font-family: "Inter", sans-serif;
+    border: 2px solid #B8B8B8;
+    transition: all 0.3s ease;
+}
+
+#descriptionInput:focus {
+    outline: none;
+    border-color: #5BA4D8;
+    box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
+    transform: translateY(-2px);
+}
+
+
+#createHousebtn {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5BA4D8;
+    font-size: 22px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#createHousebtn:hover {
+    background-color: #3991D0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#createHousebtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+}
+
    
 @media screen and (width<=321px){
     #signupForm input {
@@ -1271,8 +1697,6 @@ html{
         margin-bottom: 10px;
         margin-top: 0;
     }
-<<<<<<< HEAD
-=======
 
  
     #loginForm input {
@@ -1291,7 +1715,7 @@ html{
     }
 
    .navmobile {
-    width: 100vw;
+    width: 100%;
    }
 
    #websiteName {
@@ -1332,19 +1756,14 @@ html{
    #signupButton {
     margin-bottom: 50px;
    }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
+
+   #createaHouse{
+    font-size: 40px;
+    align-self: center;
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
-
-
-#createaHouse{
-    font-weight: lighter;
-    text-align: center;
-
-    margin-top: 35px;
-    margin-bottom: 35px;
-
-}
 
 #formContainer{
 
@@ -1352,34 +1771,24 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 0px;
 
 }
 
-#createhouseform {
-     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 500px;
-    font-size: 22px;
-    align-self: center;
-    align-items: center;
-    width: 760px;
-    padding: 10px;
-    padding-left: 20px;
-}
+
 
 #createhouseform label {
-    align-self: flex-start;
+    align-self: center;
+    width: 280px;
+    font-size: 18px;
 }
 
 #createhouseform input {
-padding-left: 8px;
-height: 60px;
 border-radius: 5px;
 border: 1px solid grey;
-width: 750px;
-font-size: large;
+width: 280px;
+height: 30px;
+font-size: 18px;
 transition: all 0.3s ease;
 }
 
@@ -1390,15 +1799,21 @@ transition: all 0.3s ease;
     transform: translateY(-2px);
 }
 
+#createhouseform {
+    width: 300px;
+    padding-left: 0;
+}
+
+
 #descriptionInput {
-    height: 200px !important;
-    padding-top: 5px;
+    height: 40px;
+    padding-top: 0px;
     text-align: left;
     vertical-align: top;
      padding-left: 8px;
      padding-top: 16px;
     line-height: 16px;
-    width: 750px;
+    width: 280px;
     font-size: large;
     font-family: "Inter", sans-serif;
     border: 2px solid #B8B8B8;
@@ -1560,12 +1975,12 @@ transition: all 0.3s ease;
     font-weight: normal;
 }
 
+}
+
 @media screen and (width<=320px){
     .nav{
         display: none;
     }
-<<<<<<< HEAD
-=======
     .navmobile{
         display: flex;
         gap: 40px;
@@ -1576,7 +1991,6 @@ transition: all 0.3s ease;
         bottom: 0;
        
     }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
     .intro {
         font-size: 20px;
         margin-left: 0px;
@@ -1590,8 +2004,6 @@ transition: all 0.3s ease;
         font-size: 20px;
         width: 170px;
     }
-<<<<<<< HEAD
-=======
     #signupForm button {
 
         width: 150px;
@@ -1639,7 +2051,6 @@ transition: all 0.3s ease;
        
         width: 100px;
     }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 }
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
@@ -1810,3 +2221,4 @@ input:focus, textarea:focus {
         box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
     }
 }
+
