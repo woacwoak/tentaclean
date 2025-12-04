@@ -30,7 +30,7 @@ body {
 
 h1 {
     font-size: 40px;
-    position:static;
+    position:absolute;
     width: 100vw;
     margin-top: 20px;
     text-align: left;
@@ -371,11 +371,23 @@ h1 {
 
 
 .Tentaclean{
-    font-size: 170%;    
-    color: white;
+       width: 70px;
+       height: 70px;    
+    color: transparent;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+
+    /* 1. Define the image and stop it from tiling */
+    background-image: url(/static/img/icons/App_icon_circle.svg);
+    background-repeat: no-repeat;
+
+    /* 2. Position it (Center or keep your 90% horizontal offset) */
+    background-position: center; 
+
+    /* 3. CONTROL THE SIZE HERE */
+    /* 'contain' scales the image to fit inside the width/height fully */
+    background-size: contain;
 }
 
 nav {
@@ -450,6 +462,7 @@ nav button{
     text-align: center;
     margin-top: 70px;
     margin-left: 0;
+    margin-bottom: 50px;
 }
 
 #createbtn, #joinbtn{
@@ -603,6 +616,11 @@ html{
     
 }
 
+.navmobile {
+    display: none;
+}
+
+
 #logOut { 
     position: relative;
     margin: 15px;
@@ -631,8 +649,6 @@ html{
     src: url(/fonts/Inter/Inter-Regular.woff2) format("woff2");
 }
 
-<<<<<<< HEAD
-=======
 
 @media screen and (width>=2560px){
     #signupForm input {
@@ -683,7 +699,6 @@ html{
 
 
 
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 @media screen and (width<=1441px){
     #signupForm input {
         width: 550px;
@@ -1592,8 +1607,6 @@ transition: all 0.3s ease;
     .nav{
         display: none;
     }
-<<<<<<< HEAD
-=======
     .navmobile{
         display: flex;
         gap: 40px;
@@ -1604,7 +1617,6 @@ transition: all 0.3s ease;
         bottom: 0;
        
     }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
     .intro {
         font-size: 20px;
         margin-left: 0px;
@@ -1618,8 +1630,6 @@ transition: all 0.3s ease;
         font-size: 20px;
         width: 170px;
     }
-<<<<<<< HEAD
-=======
     #signupForm button {
 
         width: 150px;
@@ -1667,7 +1677,6 @@ transition: all 0.3s ease;
        
         width: 100px;
     }
->>>>>>> ea91620b1f00f100df0b3ba9389f7d3012495237
 }
 /* LOGIN ans SIGNUP ERROR HANDLING*/
 /* Base alert style */
@@ -1838,3 +1847,4 @@ input:focus, textarea:focus {
         box-shadow: 0 0 0 3px rgba(91, 164, 216, 0.1);
     }
 }
+
